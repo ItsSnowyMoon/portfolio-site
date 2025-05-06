@@ -12,6 +12,14 @@ export default function AboutPage() {
     >
       <h1 style={{ fontSize: '2.5rem',color: '#b581d6', marginBottom: '1rem' }}>About Me</h1>
 
+      <p style={{ fontSize: '1.125rem', lineHeight: '1.6'}}>
+        I'm Henry Keo, a UI/UX designer passionate about solving meaningful problems through intuitive and accessible design.
+        With a strong foundation in user research and interaction design, I strive to craft thoughtful digital experiences.
+      </p>
+
+      <p style={{ fontSize: '1.125rem', lineHeight: '1.6', marginTop: '1.5rem'}}>
+        My goal is to continuously learn, iterate, and design with empathy. When I'm not designing, you might find me exploring visual storytelling or tinkering with creative tools.
+      </p>
       <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
         <img
           src="/henrykeocliff.jpg"
@@ -24,26 +32,9 @@ export default function AboutPage() {
             marginBottom: '1rem',
           }}
         />
-        <img
-            src="/skincare.webp"
-            alt="Lumiere Kiosk"
-            style={{
-                maxWidth: '100%',
-                height: 'auto',
-                borderRadius: '8px',
-                marginBottom: '1rem',
-            }}
-            />
       </div>
-
-      <p style={{ fontSize: '1.125rem', lineHeight: '1.6'}}>
-        I'm Henry Keo, a UI/UX designer passionate about solving meaningful problems through intuitive and accessible design.
-        With a strong foundation in user research and interaction design, I strive to craft thoughtful digital experiences.
-      </p>
-
-      <p style={{ fontSize: '1.125rem', lineHeight: '1.6', marginTop: '1.5rem'}}>
-        My goal is to continuously learn, iterate, and design with empathy. When I'm not designing, you might find me exploring visual storytelling or tinkering with creative tools.
-      </p>
     </section>
+    
   );
+  
 }
