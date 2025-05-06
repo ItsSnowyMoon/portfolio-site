@@ -1,4 +1,5 @@
 // app/about/page.tsx
+import Image from 'next/image';
 export default function AboutPage() {
   return (
     <section
@@ -13,17 +14,16 @@ export default function AboutPage() {
       <h1 style={{ fontSize: '2.5rem',color: '#b581d6', marginBottom: '1rem' }}>About Me</h1>
 
       <div style={{ marginBottom: '2rem', display: 'flex', justifyContent: 'center' }}>
-        <img
-          src="/henrykeocliff.jpg"
-          alt="Henry Keo"
-          style={{
-            borderRadius: '50%',
-            width: '200px',
-            height: '200px',
-            objectFit: 'cover',
-            marginBottom: '1rem',
-          }}
-        />
+  <div style={{ borderRadius: '50%', overflow: 'hidden', width: '200px', height: '200px', marginBottom: '1rem' }}>
+    <Image
+      src="/henrykeocliff.jpg"
+      alt="Henry Keo"
+      width={200}
+      height={200}
+      style={{ objectFit: 'cover' }}
+      priority // or use loading="lazy" if it's not above the fold
+    />
+  </div>
       </div>
 
       <p style={{ fontSize: '1.125rem', lineHeight: '1.6'}}>
