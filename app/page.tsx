@@ -31,7 +31,6 @@ export default function Home() {
     }}>
       Hi, I'm Henry Keo
     </h1>
-    <DesignToggle />
   </div>
 
   <p style={{ fontSize: '1.25rem' }}>
@@ -40,20 +39,20 @@ export default function Home() {
 
 
         <section style={{ marginTop: '2rem' }}>
-          <h2 style={{ fontSize: '1.75rem',color: '#b581d6', marginBottom: '1rem' }}>Explore</h2>
+          <h2 style={{ fontSize: '1.75rem',color: 'var(--accent-color)', marginBottom: '1rem' }}>Explore</h2>
           <ul style={{ listStyle: 'none', padding: 0 }}>
             <li style={{ marginBottom: '1rem' }}>
-              <Link href="/about" style={{ color: '#0070f3', textDecoration: 'none' }}>
+              <Link href="/about" style={{ color: 'var(--link-color)', textDecoration: 'underline' }}>
                 👤 About Me
               </Link>
             </li>
             <li style={{ marginBottom: '1rem' }}>
-              <Link href="/projects" style={{ color: '#0070f3', textDecoration: 'none' }}>
+              <Link href="/projects" style={{ color: 'var(--link-color)', textDecoration: 'underline' }}>
                 💼 My Projects
               </Link>
             </li>
             <li style={{ marginBottom: '1rem' }}>
-              <Link href="/contact" style={{ color: '#0070f3', textDecoration: 'none' }}>
+              <Link href="/contact" style={{ color: 'var(--link-color)', textDecoration: 'underline' }}>
                 📬 Contact
               </Link>
             </li>
@@ -63,14 +62,15 @@ export default function Home() {
         
 
 <section style={{ marginTop: '3rem' }}>
-  <h2 style={{ fontSize: '1.75rem', color: '#b581d6', marginBottom: '1rem' }}>
+  <h2 style={{ fontSize: '1.75rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
     Featured Projects
   </h2>
   <ul style={{ listStyle: 'none', padding: 0 }}>
     <li style={{ marginBottom: '1rem' }}>
-      <Link href="/projects/project1" style={{ color: '#0070f3', textDecoration: 'none' }}>
-        🌟 DSGN 100 Prototyping - Lumiere Skincare Kiosk
-      </Link>
+    <Link href="/projects/project1" style={{ color: 'var(--link-color)', textDecoration: 'underline' }}>
+  🌟 DSGN 100 Prototyping - Lumiere Skincare Kiosk
+    </Link>
+
       <p style={{ marginTop: '0.25rem' }}>
         An interactive kiosk to help users find the right skincare products.
       </p>

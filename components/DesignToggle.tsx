@@ -1,4 +1,3 @@
-// components/DesignToggle.tsx
 'use client';
 
 import { useEffect, useState } from 'react';
@@ -26,7 +25,10 @@ export default function DesignToggle() {
         backgroundColor: mode === 'day' ? '#333' : '#eee',
         color: mode === 'day' ? '#fff' : '#000',
         cursor: 'pointer',
-        marginBottom: '2rem',
+        marginLeft: 'auto', // Align it to the right side of the header
+        fontSize: '1rem',
+        fontWeight: 'bold',
+        transition: 'background-color 0.3s ease, color 0.3s ease',
       }}
     >
       Switch to {mode === 'day' ? 'Night' : 'Day'} Mode

@@ -30,16 +30,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body[data-mode='day'] {
-  --bg-color: #ffffff;
-  --text-color: #222222;
-  --accent-color: #b581d6;
+  --bg-color: #EAEBED;
+  --text-color: #202030;
+  --accent-color: #006989;
+  --link-color: #388659;
   font-family: 'Arial', sans-serif;
 }
 
 body[data-mode='night'] {
-  --bg-color: #111827;
-  --text-color: #f3f4f6;
-  --accent-color: #8f6ec5;
+  --bg-color: #3C3C3C;
+  --text-color: #508CA4;
+  --accent-color: #EDF7F6;
+  --link-color: #FC7753;
   font-family: 'Arial', sans-serif;
 }
 
