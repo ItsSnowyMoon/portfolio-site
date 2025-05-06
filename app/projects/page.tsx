@@ -25,6 +25,16 @@ export default function ProjectsPage() {
           <p style={{ marginTop: '0.25rem' }}>
             An interactive kiosk to help users find the right skincare products.
           </p>
+          <img
+            src="/skincare.webp"
+            alt="Lumiere Kiosk"
+            style={{
+                maxWidth: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+                marginBottom: '1rem',
+            }}
+            />
         </li>
 
       </ul>

@@ -18,11 +18,26 @@ export default function Home() {
   maxWidth: '800px',
   margin: '0 auto'
 }}>
-  <DesignToggle />
-  <h1 style={{ fontSize: '2.5rem', color: 'var(--accent-color)' }}>Hi, I'm Henry Keo</h1>
-        <p style={{ fontSize: '1.25rem' }}>
-          A UI/UX designer driven to dig deep and delve into unique problems through user-centered solutions.
-        </p>
+  <div style={{
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: '1rem'
+  }}>
+    <h1 style={{
+      fontSize: '2.5rem',
+      color: 'var(--accent-color)',
+      margin: 0
+    }}>
+      Hi, I'm Henry Keo
+    </h1>
+    <DesignToggle />
+  </div>
+
+  <p style={{ fontSize: '1.25rem' }}>
+    A UI/UX designer driven to dig deep and delve into unique problems through user-centered solutions.
+  </p>
+
 
         <section style={{ marginTop: '2rem' }}>
           <h2 style={{ fontSize: '1.75rem',color: '#b581d6', marginBottom: '1rem' }}>Explore</h2>
