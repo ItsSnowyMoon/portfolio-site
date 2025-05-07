@@ -63,7 +63,7 @@ export default function Home() {
             >
               Hi, I'm Henry Keo
             </motion.h1>
-
+            <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
             <p style={{ fontSize: '1.25rem', lineHeight: '1.6' }}>
               A UI/UX designer driven to dig deep and delve into unique problems through user-centered solutions.
             </p>

@@ -16,6 +16,7 @@ export default function ProjectsPage() {
       <h1 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
         My Projects
       </h1>
+      <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
    
 
       <ul style={{ listStyle: 'none', padding: 0 }}>

@@ -19,6 +19,8 @@ export default function AboutPage() {
       >
         About Me
       </h1>
+      <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
+
 
       <div
         style={{
@@ -30,16 +32,18 @@ export default function AboutPage() {
       >
         {/* Left Column: Image */}
         <img
-          src="/henrykeocliff.png"
-          alt="Henry Keo"
-          style={{
-            borderRadius: '15%',
-            width: '300px',
-            height: '300px',
-            objectFit: 'cover',
-            flexShrink: 0,
-          }}
-        />
+  src="/henrykeocliff.png"
+  alt="Henry Keo"
+  style={{
+    borderRadius: '12px',
+    width: '280px',
+    height: '280px',
+    objectFit: 'cover',
+    boxShadow: '0 8px 24px rgba(0,0,0,0.15)',
+    border: '6px solid white',
+  }}
+/>
+
 
         {/* Right Column: Text */}
         <div style={{ flex: 1, minWidth: '260px' }}>

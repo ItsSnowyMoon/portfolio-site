@@ -14,6 +14,7 @@ export default function ContactPage() {
       
     >
       <h1 style={{ fontSize: '2.5rem',color: 'var(--accent-color)', marginBottom: '1rem' }}>Contact</h1>
+      <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
       <p style={{ fontSize: '1.125rem', marginBottom: '2rem' }}>
         Feel free to reach out via email, phone, or LinkedIn!
       </p>
