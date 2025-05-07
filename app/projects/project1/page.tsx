@@ -8,7 +8,7 @@ export default function Project1Page() {
           padding: '2rem',
         }}
       >
-        <h1 style={{ fontSize: '2.5rem', color: '#b581d6', marginBottom: '1rem' }}>
+        <h1 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
           Lumiere Kiosk - Skincare
         </h1>
         <img
@@ -26,7 +26,7 @@ export default function Project1Page() {
           For this project, we were tasked to completely create a kiosk from scratch, including the physical shape and digital interface. We decided to create a skincare kiosk located in stores that sell cosmetics to help provide recommendations based on questions. Our goal was to make purchasing skincare products more user-friendly, especially for new users unfamiliar with the vast amount of products and options.
         </p>
   
-        <h2 style={{ fontSize: '2.5rem', color: '#b581d6', marginTop: '1rem' }}>Introduction</h2>
+        <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Introduction</h2>
   
         <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
   {/* Column 1 */}
@@ -56,7 +56,7 @@ export default function Project1Page() {
 </div>
 
   
-<h2 style={{ fontSize: '2.5rem', color: '#b581d6', marginTop: '1rem' }}>
+<h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>
   Online Research
 </h2>
 
@@ -97,7 +97,7 @@ export default function Project1Page() {
 </div>
 
   
-        <h2 style={{ fontSize: '2.5rem', color: '#b581d6',marginTop: '1rem' }}>Fieldwork & Interviews</h2>
+        <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)',marginTop: '1rem' }}>Fieldwork & Interviews</h2>
   
         <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Insight from Target @ Price Center on Campus</h3>
         <p><strong>Skincare Section:</strong></p>
@@ -114,7 +114,7 @@ export default function Project1Page() {
         </ul>
   
         <section style={{ padding: '2rem 0' }}>
-  <h2 style={{ fontSize: '2rem', marginBottom: '1.5rem' }}>Interview Insights</h2>
+  <h2 style={{ fontSize: '2rem',color: 'var(--accent-color)', marginBottom: '1.5rem' }}>Interview Insights</h2>
   <div
     style={{
       display: 'grid',
@@ -126,7 +126,7 @@ export default function Project1Page() {
       <p style={{ fontWeight: 'bold' }}>
         5/8 Interviewees had concerns with their skin breaking out
       </p>
-      <blockquote style={{ fontStyle: 'italic', color: '#e6d6f1' }}>
+      <blockquote style={{ fontStyle: 'italic'}}>
         “I worry about breakouts” <br />
         “My main concern is hormonal breakouts”
       </blockquote>
@@ -136,7 +136,7 @@ export default function Project1Page() {
       <p style={{ fontWeight: 'bold' }}>
         5 out of 7 interviewees open to new skincare products preferred a testing option before making a commitment
       </p>
-      <blockquote style={{ fontStyle: 'italic', color: '#e6d6f1' }}>
+      <blockquote style={{ fontStyle: 'italic'}}>
         “I would like to explore more and find products that work for my skin” <br />
         “I want to purchase new ones but don’t know which one to buy”
       </blockquote>
@@ -146,7 +146,7 @@ export default function Project1Page() {
       <p style={{ fontWeight: 'bold' }}>
         7/8 Interviewees were open to trying new products
       </p>
-      <blockquote style={{ fontStyle: 'italic', color: '#e6d6f1' }}>
+      <blockquote style={{ fontStyle: 'italic'}}>
         “I would like to explore more and find products that work for my skin” <br />
         “I want to purchase new ones but don’t know which one to buy”
       </blockquote>
@@ -161,7 +161,7 @@ export default function Project1Page() {
 </section>
 
   
-        <h2 style={{ fontSize: '2.5rem',color: '#b581d6', marginTop: '1rem' }}>Digital Interface</h2>
+        <h2 style={{ fontSize: '2.5rem',color: 'var(--accent-color)', marginTop: '1rem' }}>Digital Interface</h2>
         <p>
           We used Figma to create a prototype of an interactive interface. The landing screen includes a call to action to tap the screen to find your perfect skincare routine. The next page is a branching path depending if the user is looking to find a specific type of product or a complete routine. After selecting an option, several questions are asked to help formulate a product or skincare routine and then recommend it. Clicking on a product will show more information about the product, reviews, the price, the location, and the option to purchase a sample or to add it to the cart.
         </p>
@@ -176,7 +176,7 @@ export default function Project1Page() {
             }}
             />
 
-        <h2 style={{ fontSize: '2.5rem', color: '#b581d6', marginTop: '1 rem' }}>Physical Kiosk</h2>
+        <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1 rem' }}>Physical Kiosk</h2>
         <p>
           We used the vector drawing software Inkscape to create the design of the physical kiosk. We created 5 different panels that fit together to make a solid base and created a cut-out to hold the screen. We used a laser cutter to precisely cut the plywood pieces and spraypainted and glued them together to put the physical kiosk together.
         </p>
@@ -191,7 +191,7 @@ export default function Project1Page() {
             }}
             />
   
-        <h2 style={{ fontSize: '1.75rem', marginTop: '2rem' }}>User Testing Insights</h2>
+        <h2 style={{ fontSize: '1.75rem',color: 'var(--accent-color)', marginTop: '2rem' }}>User Testing Insights</h2>
   
         <p><strong>Pros:</strong></p>
         <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
