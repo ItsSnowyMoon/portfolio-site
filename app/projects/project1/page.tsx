@@ -33,15 +33,15 @@ export default function Project1Page() {
   <div style={{ flex: '1 1 45%' }}>
     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Opportunity</h3>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Skincare is a growing industry</li>
-      <li>Offer recommendations and increase sales</li>
-      <li>Can adapt to trends and tailor to customer needs</li>
+      <li>• Skincare is a growing industry</li>
+      <li>• Offer recommendations and increase sales</li>
+      <li>• Can adapt to trends and tailor to customer needs</li>
     </ul>
 
     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Challenges</h3>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>User adaptability</li>
-      <li>Enabling trust with consumers</li>
+      <li>• User adaptability</li>
+      <li>• Enabling trust with consumers</li>
     </ul>
   </div>
 
@@ -49,8 +49,8 @@ export default function Project1Page() {
   <div style={{ flex: '1 1 45%' }}>
     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Rationale with Site Selection</h3>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Site selection at Target with high foot traffic</li>
-      <li>Convenient for customers</li>
+      <li>• Site selection at Target with high foot traffic</li>
+      <li>• Convenient for customers</li>
     </ul>
   </div>
 </div>
@@ -65,16 +65,16 @@ export default function Project1Page() {
   <div style={{ flex: '1 1 45%' }}>
     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Skincare Routine</h3>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>71% of consumers not satisfied with their current skincare routine</li>
-      <li>80% always looking for a better skincare routine</li>
-      <li>High demand for long-lasting results</li>
+      <li>• 71% of consumers not satisfied with their current skincare routine</li>
+      <li>• 80% always looking for a better skincare routine</li>
+      <li>• High demand for long-lasting results</li>
     </ul>
 
     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Common Problems</h3>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Skin type identification and personalization</li>
-      <li>Gen Z concerned with acne/breakouts</li>
-      <li>Millennials concerned with dark eye circles</li>
+      <li>• Skin type identification and personalization</li>
+      <li>• Gen Z concerned with acne/breakouts</li>
+      <li>• Millennials concerned with dark eye circles</li>
     </ul>
   </div>
 
@@ -84,14 +84,14 @@ export default function Project1Page() {
     
     <p><strong>Pros:</strong></p>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Increase customer satisfaction</li>
-      <li>Available in remote places away from medical centers</li>
+      <li>• Increase customer satisfaction</li>
+      <li>• Available in remote places away from medical centers</li>
     </ul>
 
     <p><strong>Cons:</strong></p>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Need for internet</li>
-      <li>Privacy and security risks (facial detection data)</li>
+      <li>• Need for internet</li>
+      <li>• Privacy and security risks (facial detection data)</li>
     </ul>
   </div>
 </div>
@@ -102,15 +102,15 @@ export default function Project1Page() {
         <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Insight from Target @ Price Center on Campus</h3>
         <p><strong>Skincare Section:</strong></p>
         <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li>Many different products</li>
-          <li>Organized by product type</li>
-          <li>Information cards that explain what a product generally does</li>
+          <li>• Many different products</li>
+          <li>• Organized by product type</li>
+          <li>• Information cards that explain what a product generally does</li>
         </ul>
   
         <p><strong>Shoppers/Consumers:</strong></p>
         <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-          <li>Don’t spend much time browsing products</li>
-          <li>Already know what they are looking for</li>
+          <li>• Don’t spend much time browsing products</li>
+          <li>• Already know what they are looking for</li>
         </ul>
   
         <section style={{ padding: '2rem 0' }}>
@@ -126,10 +126,11 @@ export default function Project1Page() {
       <p style={{ fontWeight: 'bold' }}>
         5/8 Interviewees had concerns with their skin breaking out
       </p>
-      <blockquote style={{ fontStyle: 'italic'}}>
-        “I worry about breakouts” <br />
-        “My main concern is hormonal breakouts”
-      </blockquote>
+      <blockquote style={{ fontStyle: 'italic', marginLeft: '1.5rem' }}>
+  “I worry about breakouts” <br />
+  “My main concern is hormonal breakouts”
+</blockquote>
+
     </div>
 
     <div>
