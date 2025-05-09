@@ -163,9 +163,15 @@ export default function Project1Page() {
   </div>
 </section>
 
-  
+   <section style={{ padding: '2rem 0' }}>
+    
         <h2 style={{ fontSize: '2.5rem',color: 'var(--accent-color)', marginTop: '1rem' }}>Digital Interface</h2>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
+        
+        <h2 style={{ fontSize: '2rem',color: 'var(--accent-color)', marginTop: '1rem' }}>Lo-Fi Wireframe</h2>
+
+
+        
         <p>
           We used Figma to create a prototype of an interactive interface. The landing screen includes a call to action to tap the screen to find your perfect skincare routine. The next page is a branching path depending if the user is looking to find a specific type of product or a complete routine. After selecting an option, several questions are asked to help formulate a product or skincare routine and then recommend it. Clicking on a product will show more information about the product, reviews, the price, the location, and the option to purchase a sample or to add it to the cart.
         </p>
@@ -177,9 +183,10 @@ export default function Project1Page() {
                 height: 'auto',
                 borderRadius: '8px',
                 marginBottom: '1rem',
-            }}
+            }}            
             />
-
+            
+</section>
         <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1 rem' }}>Physical Kiosk</h2>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
         <p>
