@@ -85,7 +85,7 @@ export default function ContactPage() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        style={{ marginTop: '3rem', textAlign: 'center' }}
+        style={{ marginTop: '3rem', textAlign: 'left' }}
       >
         <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-color)' }}>
           Let's Make Things Happen!

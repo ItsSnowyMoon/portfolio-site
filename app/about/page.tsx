@@ -126,7 +126,7 @@ export default function AboutPage() {
             fontSize: '1rem',
           }}
         >
-          {['Figma', 'Typescript', 'HTML/CSS', 'JavaScript','Python', 'React', 'User Research', 'Wireframing','Prototyping','Usability Testing','Excel','SQL','Tableau','GitHub', 'User Interviews',].map(
+          {['Figma', 'Typescript', 'HTML/CSS', 'JavaScript','Python', 'React', 'User Research', 'Wireframing','Prototyping','Usability Testing','Excel','SQL','Tableau','GitHub', 'User Interviews  ',].map(
             (skill) => (
               <li
                 key={skill}
