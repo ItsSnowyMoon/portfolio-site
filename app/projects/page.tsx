@@ -30,7 +30,7 @@ export default function ProjectsPage() {
             boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
           }}
         >
-          <Link href="/projects/project1" passHref>
+          <Link href="/projects/kiosk" passHref>
             <motion.button
               whileHover={{
                 scale: 1.03,
@@ -69,6 +69,160 @@ export default function ProjectsPage() {
           </div>
         </li>
       </ul>
+
+<ul style={{ listStyle: 'none', padding: 0 }}>
+        <li
+          style={{
+            background: 'var(--bg-color)',
+            border: '1px solid #ccc',
+            borderRadius: '12px',
+            padding: '1rem',
+            marginBottom: '1rem',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+          }}
+        >
+          <Link href="/projects/tijuana" passHref>
+            <motion.button
+              whileHover={{
+                scale: 1.03,
+                boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+              }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              style={{
+                backgroundColor: 'var(--accent-color)',
+                color: '#fff',
+                padding: '0.75rem 1.25rem',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+              }}
+            >
+              🌟 County of San Diego – Tijuana River Valley Enviromental Dashboard
+            </motion.button>
+          </Link>
+
+          <div style={{ marginTop: '1rem' }}>
+            <p style={{ marginBottom: '0.5rem' }}>
+              An interactive dasboard for the County of San Diego to help users find be informed about enviromental crisses.
+            </p>
+
+            <img
+              src="/tijuana.png"
+              alt="Tijuana Dashboard"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+              }}
+            />
+          </div>
+        </li>
+      </ul>
+
+<ul style={{ listStyle: 'none', padding: 0 }}>
+        <li
+          style={{
+            background: 'var(--bg-color)',
+            border: '1px solid #ccc',
+            borderRadius: '12px',
+            padding: '1rem',
+            marginBottom: '1rem',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+          }}
+        >
+          <Link href="/projects/lowprice" passHref>
+            <motion.button
+              whileHover={{
+                scale: 1.03,
+                boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+              }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              style={{
+                backgroundColor: 'var(--accent-color)',
+                color: '#fff',
+                padding: '0.75rem 1.25rem',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+              }}
+            >
+              🌟 Lowprice Center - UCSD CSES
+            </motion.button>
+          </Link>
+
+          <div style={{ marginTop: '1rem' }}>
+            <p style={{ marginBottom: '0.5rem' }}>
+              An online marketplace for UCSD students to sell and buy goods.
+            </p>
+
+            <img
+              src="/lowprice.png"
+              alt="Lowprice Homepage"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+              }}
+            />
+          </div>
+        </li>
+      </ul>
+
+      <ul style={{ listStyle: 'none', padding: 0 }}>
+        <li
+          style={{
+            background: 'var(--bg-color)',
+            border: '1px solid #ccc',
+            borderRadius: '12px',
+            padding: '1rem',
+            marginBottom: '1rem',
+            boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+          }}
+        >
+          <Link href="/projects/lowprice" passHref>
+            <motion.button
+              whileHover={{
+                scale: 1.03,
+                boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
+              }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              style={{
+                backgroundColor: 'var(--accent-color)',
+                color: '#fff',
+                padding: '0.75rem 1.25rem',
+                border: 'none',
+                borderRadius: '8px',
+                cursor: 'pointer',
+                fontWeight: 'bold',
+                fontSize: '1rem',
+              }}
+            >
+              🌟 Lifesaver Project - UCSD Design Lab Center for Health
+            </motion.button>
+          </Link>
+
+          <div style={{ marginTop: '1rem' }}>
+            <p style={{ marginBottom: '0.5rem' }}>
+              An online marketplace for UCSD students to sell and buy goods.
+            </p>
+
+            <img
+              src="/lowprice.png"
+              alt="Lowprice Homepage"
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+                borderRadius: '8px',
+              }}
+            />
+          </div>
+        </li>
+      </ul>
+
     </section>
   );
 }
