@@ -207,11 +207,11 @@ export default function ProjectsPage() {
 
           <div style={{ marginTop: '1rem' }}>
             <p style={{ marginBottom: '0.5rem' }}>
-              An online marketplace for UCSD students to sell and buy goods.
+              Providing Universal Healthcare
             </p>
 
             <img
-              src="/lowprice.png"
+              src="/devonmars.jpg"
               alt="Lowprice Homepage"
               style={{
                 maxWidth: '100%',
