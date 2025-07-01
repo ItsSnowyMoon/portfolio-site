@@ -156,11 +156,11 @@ export default function ProjectsPage() {
 
           <div style={{ marginTop: '1rem' }}>
             <p style={{ marginBottom: '0.5rem' }}>
-              An online marketplace for UCSD students to sell and buy goods.
+              An e-commerce platform for UCSD students to exchange and sell goods.
             </p>
 
             <img
-              src="/lowprice.png"
+              src="/Home Page.png"
               alt="Lowprice Homepage"
               style={{
                 maxWidth: '100%',
