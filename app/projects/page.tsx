@@ -183,7 +183,7 @@ export default function ProjectsPage() {
             boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
           }}
         >
-          <Link href="/projects/lowprice" passHref>
+          <Link href="/projects/lifesaver" passHref>
             <motion.button
               whileHover={{
                 scale: 1.03,
@@ -212,7 +212,7 @@ export default function ProjectsPage() {
 
             <img
               src="/devonmars.jpg"
-              alt="Lowprice Homepage"
+              alt="Devon Mars"
               style={{
                 maxWidth: '100%',
                 height: 'auto',
