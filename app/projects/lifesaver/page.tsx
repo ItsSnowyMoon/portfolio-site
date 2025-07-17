@@ -344,7 +344,7 @@ export default function LifeSaverProjectPage() {
   }}
 >
   <img
-    src="/panel.jpg"
+    src="/panel.JPG"
     alt="Lifesaver Panel"
     style={{
       width: '100%',
@@ -353,7 +353,7 @@ export default function LifeSaverProjectPage() {
     }}
   />
   <img
-    src="/crowd.jpg"
+    src="/crowd.JPG"
     alt="Lifesaver Crowd"
     style={{
       width: '100%',
@@ -362,7 +362,7 @@ export default function LifeSaverProjectPage() {
     }}
   />
   <img
-    src="/team.png"
+    src="/team.PNG"
     alt="Lifesaver Team"
     style={{
       width: '100%',
@@ -371,7 +371,7 @@ export default function LifeSaverProjectPage() {
     }}
   />
   <img
-    src="/booth.jpg"
+    src="/booth.JPG"
     alt="Lifesaver Booth"
     style={{
       width: '100%',
