@@ -223,18 +223,18 @@ export default function Home() {
     Featured Projects
   </h2>
   <ul style={{ listStyle: 'none', padding: 0 }}>
-
-    {/* Lumiere Skincare Kiosk */}
+  {/* Lifesaver Project */}
     <li style={cardStyle}>
       <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
-        <Link href="/projects/kiosk" passHref>
-          <button style={buttonStyle}>🌟 DSGN 100 Prototyping – Lumiere Skincare Kiosk</button>
+        <Link href="/projects/lifesaver" passHref>
+          <button style={buttonStyle}>🌟 Lifesaver Project – UCSD Design Lab Center for Health</button>
         </Link>
       </motion.div>
       <p style={{ marginTop: '0.5rem' }}>
-        An interactive kiosk to help users find the right skincare products.
+        A digital healthcare initiative to improve access to universal care.
       </p>
     </li>
+ 
 
     {/* Tijuana River Valley Dashboard */}
     <li style={cardStyle}>
@@ -260,15 +260,15 @@ export default function Home() {
       </p>
     </li>
 
-    {/* Lifesaver Project */}
+     {/* Lumiere Skincare Kiosk */}
     <li style={cardStyle}>
       <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
-        <Link href="/projects/lifesaver" passHref>
-          <button style={buttonStyle}>🌟 Lifesaver Project – UCSD Design Lab Center for Health</button>
+        <Link href="/projects/kiosk" passHref>
+          <button style={buttonStyle}>🌟 DSGN 100 Prototyping – Lumiere Skincare Kiosk</button>
         </Link>
       </motion.div>
       <p style={{ marginTop: '0.5rem' }}>
-        A digital healthcare initiative to improve access to universal care.
+        An interactive kiosk to help users find the right skincare products.
       </p>
     </li>
 

@@ -11,7 +11,7 @@ export default function Project2Page() {
         }}
       >
         <h1 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
-            Case Study: Designing the Tijuana River Valley Sewage Crisis Environmental Dashboard
+            Tijuana River Valley Sewage Crisis Environmental Dashboard
         </h1>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
         <img
@@ -28,17 +28,7 @@ export default function Project2Page() {
         <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
           In response to the ongoing environmental challenges in South San Diego County, particularly concerning sewage pollution from the Tijuana River, the County of San Diego, in collaboration with UC San Diego's Resilient Shield team, developed an interactive dashboard. This tool aims to provide residents with real-time information on beach water quality, hydrogen sulfide levels, odor complaints, and sewage spills, thereby empowering them to make informed decisions about their health and activities.
         </p>
-          <li style={{ marginBottom: '1rem' }}>
-          County of San Diego Tijuana River Enviromental {' '}
-          <Link
-            href="https://southregion.resilienthub.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--link-color)', textDecoration: 'underline' }}
-          >
-            Dashboard
-          </Link>
-        </li>
+
         <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>My Role: Lead UI/UX Designer</h2>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
          <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}> As the Lead UI/UX Designer, I was entrusted with the responsibility of conceptualizing and executing the user experience and interface design for the dashboard. My primary objectives included:</p>
@@ -75,6 +65,11 @@ export default function Project2Page() {
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
       <li>Utilizing Figma, I created wireframes that mapped out the dashboard's structure, focusing on user flow and information hierarchy. Interactive prototypes were then developed to simulate user interactions, which were instrumental during stakeholder presentations and usability testing sessions.</li>
     </ul>
+     <img
+          src="/sdoverview.png"
+          alt="Hi-Fi Prototype Recommendations"
+          style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
 <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>3. Visual Design</h3>
     <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
       <li>The visual design emphasized clarity and accessibility. Color schemes were chosen to represent different data types (e.g., red for high pollution levels) while ensuring compliance with WCAG guidelines for color contrast. Icons and infographics were incorporated to aid quick comprehension.</li>
@@ -116,15 +111,39 @@ export default function Project2Page() {
   </div>
 </div>
 
+<img
+  src="/sdgifs.gif"
+  alt="Tijuana River Valley Dashboard Walkthrough"
+  style={{
+    width: '100%',
+    height: 'auto',
+    borderRadius: '8px',
+    marginBottom: '1rem',
+  }}
+/>
+
+
 <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Impact</h2>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
          <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}> Since its launch, the dashboard has become a vital resource for South County residents, offering transparency and fostering community engagement in environmental health matters. The intuitive design has been praised for making complex data accessible to non-expert users, thereby enhancing public awareness and participation in addressing the sewage crisis.</p>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}></div>
+        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}></div><p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+  You can view the live Tijuana River Valley Environmental Dashboard here:{' '}
+  <a
+    href="https://southregion.resilienthub.org/"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{ color: 'var(--accent-color)', textDecoration: 'underline' }}
+  >
+    https://southregion.resilienthub.org/
+  </a>
+</p>
+
   
         <footer style={{ marginTop: '4rem', fontSize: '0.875rem', color: '#888' }}>
           <p>&copy; {new Date().getFullYear()} Henry Keo. All rights reserved.</p>
         </footer>
       </section>
+      
     );
   }
   

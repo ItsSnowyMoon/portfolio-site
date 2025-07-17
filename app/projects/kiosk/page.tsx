@@ -165,26 +165,98 @@ export default function Project1Page() {
 
    <section style={{ padding: '2rem 0' }}>
     
-        <h2 style={{ fontSize: '2.5rem',color: 'var(--accent-color)', marginTop: '1rem' }}>Digital Interface</h2>
-        <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
-        
-        <h2 style={{ fontSize: '2rem',color: 'var(--accent-color)', marginTop: '1rem' }}>Lo-Fi Wireframe</h2>
+<h2
+  style={{
+    fontSize: '2.5rem',
+    color: 'var(--accent-color)',
+    marginTop: '2rem', // more breathing space
+    marginBottom: '0.5rem',
+  }}
+>
+  Digital Interface
+</h2>
+<hr
+  style={{
+    border: 'none',
+    height: '1px',
+    backgroundColor: 'var(--accent-color)',
+    margin: '0.5rem 0 1.5rem 0',
+  }}
+/>
 
+<h2
+  style={{
+    fontSize: '2rem',
+    color: 'var(--accent-color)',
+    marginTop: '1.5rem',
+    marginBottom: '1rem',
+  }}
+>
+  Lo-Fi Wireframe & Prototyping
+</h2>
 
-        
-        <p>
-          We used Figma to create a prototype of an interactive interface. The landing screen includes a call to action to tap the screen to find your perfect skincare routine. The next page is a branching path depending if the user is looking to find a specific type of product or a complete routine. After selecting an option, several questions are asked to help formulate a product or skincare routine and then recommend it. Clicking on a product will show more information about the product, reviews, the price, the location, and the option to purchase a sample or to add it to the cart.
-        </p>
+<p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+  We began by using Figma to create lo-fi wireframes for a clear, intuitive skincare recommendation interface. The landing screen featured a call to action prompting users to “Tap to Find Your Perfect Skincare Routine,” establishing immediate engagement.
+</p>
+
+<p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+  The next screen provided a branching path: users could choose to find a specific type of product (e.g., cleanser, sunscreen) or opt for a complete skincare routine personalized to their needs.
+</p>
+
+<p style={{ fontSize: '1.125rem', marginBottom: '2rem' }}>
+  After making a selection, the user was guided through a series of questions about skin type (oily, dry, combination), specific concerns (acne, aging, sensitivity), and lifestyle factors (indoor/outdoor activity, budget preferences). These questions helped generate personalized recommendations for products or routines, ensuring relevance to each user’s skincare needs.
+</p>
+
+<div
+>
+  <img
+    src="/lo-fi kiosk.png"
+    alt="Lo-Fi Wireframe"
+    style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+  />
+</div>
+
+<h2
+  style={{
+    fontSize: '2rem',
+    color: 'var(--accent-color)',
+    marginTop: '1.5rem',
+    marginBottom: '1rem',
+  }}
+>
+  Hi-Fidelity Prototype
+</h2>
+
+<p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+  Following user testing and wireframe validation, we developed hi-fidelity prototypes in Figma, refining visual hierarchy, color palettes, and micro-interactions to align with the brand’s identity and enhance usability.
+</p>
+
+<p style={{ fontSize: '1.125rem', marginBottom: '2rem' }}>
+  Key refinements included: progress indicators for quiz completion, animated transitions between questions to maintain engagement, card-based layouts for quick scanning, integrated product detail modals with images, price, location availability, user reviews, and ingredients, and clear CTAs for “Add to Cart” and “Purchase Sample.”
+</p>
+
+      <div
+      >
         <img
-            src="/skincare.jpg"
-            alt="Lumiere Kiosk"
-            style={{
-                maxWidth: '100%',
-                height: 'auto',
-                borderRadius: '8px',
-                marginBottom: '1rem',
-            }}            
-            />
+          src="/skincare.jpg"
+          alt="Hi-Fi Prototype Recommendations"
+          style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+        <img
+          src="/sample kiosk.png"
+          alt="Hi-Fi Prototype Product Detail"
+          style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+        />
+      </div>
+
+      <h2 style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Key User Interactions</h2>
+      <ul style={{ fontSize: '1.125rem', paddingLeft: '1.5rem' }}>
+        <li><strong>✅ Answer Skincare Questions:</strong> Users answer guided questions to tailor product and routine recommendations based on skin type, concerns, and lifestyle.</li>
+        <li><strong>✅ Browse Personalized Recommendations:</strong> Users view personalized product or routine suggestions with images, ingredient highlights, and ratings.</li>
+        <li><strong>✅ View Product Details:</strong> Clicking a product displays a detail page with images, price, availability, reviews, and a clear breakdown of fit to the user’s skin profile.</li>
+        <li><strong>✅ Purchase & Test Samples:</strong> Users can add products to their cart or purchase a sample size to try products before committing, increasing trust in recommendations.</li>
+        <li><strong>✅ Seamless Checkout:</strong> A clean checkout flow allows users to complete purchases efficiently, with options for location-based pickup or delivery.</li>
+      </ul>
             
 </section>
         <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1 rem' }}>Physical Kiosk</h2>
