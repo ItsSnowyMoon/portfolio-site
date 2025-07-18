@@ -82,7 +82,7 @@ export default function AboutPage() {
         {/* Bio Text */}
         <div style={{ flex: 1, minWidth: '260px' }}>
           <p style={{ fontSize: '1.125rem', lineHeight: '1.6', marginBottom: '1rem' }}>
-            I'm Henry Keo, a UI/UX designer passionate about solving meaningful problems through intuitive and accessible design. With a strong foundation in user research and interaction design, I strive to craft thoughtful digital experiences.
+            I'm Henry Keo, a UX/UI designer passionate about solving meaningful problems through intuitive and accessible design. With a strong foundation in user research and interaction design, I strive to craft thoughtful digital experiences.
           </p>
 
           <p style={{ fontSize: '1.125rem', lineHeight: '1.6' }}>
