@@ -155,7 +155,7 @@ export default function AboutPage() {
         <p style={{ fontSize: '1.125rem', lineHeight: '1.6', color: 'var(--text-color)' }}>
           <li>I love being active and playing sports</li>
           <li>I love storytelling, reading, and expereincing new things</li>
-          <li>I'm a advent gamer that plays every genre under the sun</li>
+          <li>I'm an advent gamer that plays every genre under the sun</li>
         </p>
       </motion.div>
     </section>
