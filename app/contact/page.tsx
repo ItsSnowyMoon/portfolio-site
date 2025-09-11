@@ -51,7 +51,7 @@ export default function ContactPage() {
         style={{ listStyle: 'none', padding: 0, fontSize: '1.1rem' }}
       >
         <li style={{ marginBottom: '1rem' }}>
-          📧 Email:{' '}
+          Email:{' '}
           <Link
             href="mailto:henry@example.com"
             style={{ color: 'var(--link-color)', textDecoration: 'underline' }}
@@ -60,7 +60,7 @@ export default function ContactPage() {
           </Link>
         </li>
         <li style={{ marginBottom: '1rem' }}>
-          📞 Phone:{' '}
+          Phone:{' '}
           <Link
             href="tel:+1234567890"
             style={{ color: 'var(--link-color)', textDecoration: 'underline' }}
@@ -69,7 +69,7 @@ export default function ContactPage() {
           </Link>
         </li>
         <li style={{ marginBottom: '1rem' }}>
-          💼 LinkedIn:{' '}
+          LinkedIn:{' '}
           <Link
             href="https://www.linkedin.com/in/henry-keo-6673351b0"
             target="_blank"

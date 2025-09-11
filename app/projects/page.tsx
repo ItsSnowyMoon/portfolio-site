@@ -115,28 +115,28 @@ export default function ProjectsPage() {
           {[
             {
               href: '/projects/lifesaver',
-              title: '🌟 Lifesaver Project - UCSD Design Lab Center for Health',
+              title: 'Lifesaver Project - UCSD Design Lab Center for Health',
               description: 'Providing Universal Healthcare.',
               img: '/devonmars.jpg',
               alt: 'Devon Mars',
             },
             {
               href: '/projects/tijuana',
-              title: '🌟 County of San Diego – Tijuana River Valley Environmental Dashboard',
+              title: 'County of San Diego – Tijuana River Valley Environmental Dashboard',
               description: 'An interactive dashboard for the County of San Diego to help users stay informed about environmental crises.',
               img: '/tijuana.png',
               alt: 'Tijuana Dashboard',
             },
             {
               href: '/projects/lowprice',
-              title: '🌟 Lowprice Center - UCSD CSES',
+              title: 'Lowprice Center - UCSD CSES',
               description: 'An e-commerce platform for UCSD students to exchange and sell goods.',
               img: '/Home Page.png',
               alt: 'Lowprice Homepage',
             },
             {
               href: '/projects/kiosk',
-              title: '🌟 DSGN 100 Prototyping – Lumiere Skincare Kiosk',
+              title: 'DSGN 100 Prototyping – Lumiere Skincare Kiosk',
               description: 'An interactive kiosk to help users find the right skincare products.',
               img: '/skincare.webp',
               alt: 'Lumiere Kiosk',

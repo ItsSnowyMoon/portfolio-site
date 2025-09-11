@@ -251,11 +251,11 @@ export default function Project1Page() {
 
       <h2 style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Key User Interactions</h2>
       <ul style={{ fontSize: '1.125rem', paddingLeft: '1.5rem' }}>
-        <li><strong>✅ Answer Skincare Questions:</strong> Users answer guided questions to tailor product and routine recommendations based on skin type, concerns, and lifestyle.</li>
-        <li><strong>✅ Browse Personalized Recommendations:</strong> Users view personalized product or routine suggestions with images, ingredient highlights, and ratings.</li>
-        <li><strong>✅ View Product Details:</strong> Clicking a product displays a detail page with images, price, availability, reviews, and a clear breakdown of fit to the user’s skin profile.</li>
-        <li><strong>✅ Purchase & Test Samples:</strong> Users can add products to their cart or purchase a sample size to try products before committing, increasing trust in recommendations.</li>
-        <li><strong>✅ Seamless Checkout:</strong> A clean checkout flow allows users to complete purchases efficiently, with options for location-based pickup or delivery.</li>
+        <li><strong> Answer Skincare Questions:</strong> Users answer guided questions to tailor product and routine recommendations based on skin type, concerns, and lifestyle.</li>
+        <li><strong> Browse Personalized Recommendations:</strong> Users view personalized product or routine suggestions with images, ingredient highlights, and ratings.</li>
+        <li><strong> View Product Details:</strong> Clicking a product displays a detail page with images, price, availability, reviews, and a clear breakdown of fit to the user’s skin profile.</li>
+        <li><strong> Purchase & Test Samples:</strong> Users can add products to their cart or purchase a sample size to try products before committing, increasing trust in recommendations.</li>
+        <li><strong> Seamless Checkout:</strong> A clean checkout flow allows users to complete purchases efficiently, with options for location-based pickup or delivery.</li>
       </ul>
             
 </section>

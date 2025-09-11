@@ -132,9 +132,9 @@ export default function Home() {
               <h2 style={{ fontSize: '1.75rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>Explore</h2>
               <ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                 {[
-                  { href: '/about', label: '👤 About Me' },
-                  { href: '/projects', label: '💼 My Projects' },
-                  { href: '/contact', label: '📬 Contact' },
+                  { href: '/about', label: 'About Me' },
+                  { href: '/projects', label: 'My Projects' },
+                  { href: '/contact', label: 'Contact' },
                 ].map((link, i) => (
                   <motion.li
                     key={link.href}
@@ -227,7 +227,7 @@ export default function Home() {
     <li style={cardStyle}>
       <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
         <Link href="/projects/lifesaver" passHref>
-          <button style={buttonStyle}>🌟 Lifesaver Project – UCSD Design Lab Center for Health</button>
+          <button style={buttonStyle}>Lifesaver Project – UCSD Design Lab Center for Health</button>
         </Link>
       </motion.div>
       <p style={{ marginTop: '0.5rem' }}>
@@ -240,7 +240,7 @@ export default function Home() {
     <li style={cardStyle}>
       <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
         <Link href="/projects/tijuana" passHref>
-          <button style={buttonStyle}>🌟 County of San Diego – Tijuana River Valley Environmental Dashboard</button>
+          <button style={buttonStyle}>County of San Diego – Tijuana River Valley Environmental Dashboard</button>
         </Link>
       </motion.div>
       <p style={{ marginTop: '0.5rem' }}>
@@ -252,7 +252,7 @@ export default function Home() {
     <li style={cardStyle}>
       <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
         <Link href="/projects/lowprice" passHref>
-          <button style={buttonStyle}>🌟 Lowprice Center – UCSD CSES</button>
+          <button style={buttonStyle}>Lowprice Center – UCSD CSES</button>
         </Link>
       </motion.div>
       <p style={{ marginTop: '0.5rem' }}>
@@ -264,7 +264,7 @@ export default function Home() {
     <li style={cardStyle}>
       <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
         <Link href="/projects/kiosk" passHref>
-          <button style={buttonStyle}>🌟 DSGN 100 Prototyping – Lumiere Skincare Kiosk</button>
+          <button style={buttonStyle}>DSGN 100 Prototyping – Lumiere Skincare Kiosk</button>
         </Link>
       </motion.div>
       <p style={{ marginTop: '0.5rem' }}>

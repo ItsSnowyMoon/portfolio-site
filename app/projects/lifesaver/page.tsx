@@ -37,6 +37,16 @@ export default function LifeSaverProjectPage() {
           provides step-by-step guidance for patients to self-administer care, while tracking health data for
           ongoing monitoring.
         </li>
+        <img
+  src="/HomeLOP.png"
+  alt="AILA Samsung Flip 5 Interface"
+  style={{
+    maxWidth: '150%',
+    height: 'auto',
+    borderRadius: '8px',
+    marginBottom: '1rem',
+  }}
+/>
       </ul>
 
       <h2 style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>My Role</h2>
@@ -167,7 +177,7 @@ export default function LifeSaverProjectPage() {
       </h2>
 
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>Medical Procedures</strong><br />
+        <strong>Medical Procedures</strong><br />
         AILA generates clear, step-by-step medical procedures after determining a diagnosis, displaying the medical condition at the top with an active timer to track procedure duration. Each procedure is broken into steps, with substeps, instructional images, and checklists to guide non-expert users confidently during high-stress situations. Users can scroll to view substeps within each step and use navigation arrows to move forward or backward, ensuring they can follow procedures safely and at their own pace.
       </p>
 <img
@@ -181,7 +191,7 @@ export default function LifeSaverProjectPage() {
   }}
 />
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>Quick Access</strong><br />
+        <strong>Quick Access</strong><br />
         A swipe-up sidebar provides instant access to the camera, vitals, map, timer, and user profile, ensuring critical tools are one tap away during treatments. This allows seamless switching between tasks (e.g., checking vitals during a procedure) without losing context, supporting rapid, flexible care delivery in the field.
       </p>
 <img
@@ -195,7 +205,7 @@ export default function LifeSaverProjectPage() {
   }}
 />
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>Vitals Monitoring</strong><br />
+        <strong>Vitals Monitoring</strong><br />
         Displays color-coded, real-time vital signs (temperature, heart rate, respiration, etc.), with at-risk conditions highlighted in red for quick triage. Users can toggle to a trends view to see historical vitals data for informed treatment decisions. A dropdown menu allows users to select specific vitals to view detailed trends, enabling proactive monitoring and intervention during prolonged care sessions.
       </p>
 <img
@@ -209,7 +219,7 @@ export default function LifeSaverProjectPage() {
   }}
 />
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>Camera Features</strong><br />
+        <strong>Camera Features</strong><br />
         Using integrated sensors, the camera can capture temperature, respiration, and heart rate readings during assessments. Users can take photos to save on the device, flip the camera, review previous images, or switch to an emotion detection mode using Google’s emotion detection API. This mode generates bar graphs visualizing emotional states based on facial expressions, providing a holistic view of the patient’s or user’s mental well-being.
       </p>
 <img
@@ -223,7 +233,7 @@ export default function LifeSaverProjectPage() {
   }}
 />
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>Timer Functionality</strong><br />
+        <strong>Timer Functionality</strong><br />
         Allows users to set and manage treatment or medication timers easily by scrolling to adjust durations and tapping “Start.” A toggle lets users view all active timers across users and events, showing remaining time for each and allowing deletion of completed or unnecessary timers via a trash icon.
       </p>
 <img
@@ -237,7 +247,7 @@ export default function LifeSaverProjectPage() {
   }}
 />
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>Map Navigation</strong><br />
+        <strong>Map Navigation</strong><br />
         Displays the user’s location relative to a set base and shows the optimal route back during treatments in remote areas. It also visualizes the location of any deployed but not actively carried devices, ensuring equipment tracking and enhancing safety during operations in the field.
       </p>
 <img
@@ -251,7 +261,7 @@ export default function LifeSaverProjectPage() {
   }}
 />
       <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        ✅ <strong>User Profiles</strong><br />
+       <strong>User Profiles</strong><br />
         Provides comprehensive personal health management for the gauntlet user. The profile includes real-time vitals monitoring similar to the patient view but specific to the user, ensuring they can track their health while providing care. The medical records section includes:
       </p>
       <img
@@ -384,10 +394,10 @@ export default function LifeSaverProjectPage() {
 
       <h2 style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Key Design Principles</h2>
       <ul style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
-        <li>✅ Simplicity Under Stress: Clear AR language, visuals, and progress tracking under emergencies.</li>
-        <li>✅ Hands-Free Operation: Designed for AR headset and gesture input for sterility and safety.</li>
-        <li>✅ Transparency: Users can view steps and escalate to human support if needed.</li>
-        <li>✅ Scalable System: Usable in urban clinics, disaster relief, research bases, and space missions.</li>
+        <li>Simplicity Under Stress: Clear AR language, visuals, and progress tracking under emergencies.</li>
+        <li>Hands-Free Operation: Designed for AR headset and gesture input for sterility and safety.</li>
+        <li>Transparency: Users can view steps and escalate to human support if needed.</li>
+        <li>Scalable System: Usable in urban clinics, disaster relief, research bases, and space missions.</li>
       </ul>
 
       <h2 style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Impact</h2>

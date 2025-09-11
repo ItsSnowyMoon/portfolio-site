@@ -153,10 +153,9 @@ export default function AboutPage() {
       >
         <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-color)', marginBottom: '0.5rem' }}>Outside of Design</h3>
         <p style={{ fontSize: '1.125rem', lineHeight: '1.6', color: 'var(--text-color)' }}>
-          🎥 I love visual storytelling<br />
-          🎮 I'm a casual gamer<br />
-          📷 I enjoy taking nature and travel photos<br />
-          🧠 Always curious about creativity and technology
+          <li>I love being active and playing sports</li>
+          <li>I love storytelling, reading, and expereincing new things</li>
+          <li>I'm a advent gamer that plays every genre under the sun</li>
         </p>
       </motion.div>
     </section>
