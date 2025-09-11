@@ -1,8 +1,36 @@
-// app/projects/project2/page.tsx
+'use client';
+
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Head from 'next/head';
+
 export default function Project2Page() {
-    return (
-      <section
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
+  };
+
+  const imageVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
+  };
+
+  const listVariants = {
+    hidden: { opacity: 0, x: -20 },
+    visible: { opacity: 1, x: 0, transition: { staggerChildren: 0.2 } },
+  };
+
+  return (
+    <>
+      <Head>
+        <title>Tijuana Dashboard | Henry Keo</title>
+        <meta name="description" content="Tijuana River Valley Sewage Dashboard by Henry Keo" />
+      </Head>
+
+      <motion.section
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
         style={{
           fontFamily: 'Arial, sans-serif',
           maxWidth: '800px',
@@ -10,140 +38,117 @@ export default function Project2Page() {
           padding: '2rem',
         }}
       >
-        <h1 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
-            Tijuana River Valley Sewage Crisis Environmental Dashboard
-        </h1>
+        <motion.h1
+          variants={sectionVariants}
+          style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}
+        >
+          Tijuana River Valley Sewage Crisis Dashboard
+        </motion.h1>
+
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
-        <img
-            src="/tijuana.png"
-            alt="Lumiere Kiosk"
-            style={{
-                maxWidth: '100%',
-                height: 'auto',
-                borderRadius: '8px',
-                marginBottom: '1rem',
-            }}
-            />
-  
-        <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-          In response to the ongoing environmental challenges in South San Diego County, particularly concerning sewage pollution from the Tijuana River, the County of San Diego, in collaboration with UC San Diego's Resilient Shield team, developed an interactive dashboard. This tool aims to provide residents with real-time information on beach water quality, hydrogen sulfide levels, odor complaints, and sewage spills, thereby empowering them to make informed decisions about their health and activities.
-        </p>
 
-        <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>My Role: Lead UI/UX Designer</h2>
-        <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
-         <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}> As the Lead UI/UX Designer, I was entrusted with the responsibility of conceptualizing and executing the user experience and interface design for the dashboard. My primary objectives included:</p>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-  {/* Column 1 */}
-  <div style={{ flex: '1 1 45%' }}>
-    <h3 style={{ fontSize: '1.5rem', marginTop: '.5rem' }}>User-Centered Design</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '.5rem' }}>
-      <li>Ensuring the dashboard is intuitive and accessible to a diverse user base, including residents, public health officials, and policymakers.</li>
-    </ul>
-
-    <h3 style={{ fontSize: '1.5rem', marginTop: '.5rem' }}>Data Visualization</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '.5rem' }}>
-      <li>Presenting complex environmental data in a clear and comprehensible manner.</li>
-    </ul>
-
-    <h3 style={{ fontSize: '1.5rem', marginTop: '.5rem' }}>Prototyping</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '.5rem' }}>
-      <li>Developing interactive prototypes using Figma to facilitate stakeholder feedback and iterative design improvements.</li>
-    </ul>
-  </div>  
-</div>
-
-  
-        <h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)',marginTop: '1rem' }}>Design Process</h2>
-        <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
- {/* Left Column */}
-  <div style={{ flex: '1 1 45%' }}>
-    <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>1. Research & User Analysis</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Understanding the target audience was paramount. I conducted user interviews and surveys to gauge the needs and preferences of South County residents. Key insights included the necessity for mobile responsiveness, multilingual support, and straightforward data interpretation.</li>
-    </ul>
-    <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>2. Wireframing & Prototyping</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Utilizing Figma, I created wireframes that mapped out the dashboard's structure, focusing on user flow and information hierarchy. Interactive prototypes were then developed to simulate user interactions, which were instrumental during stakeholder presentations and usability testing sessions.</li>
-    </ul>
-     <img
-          src="/sdoverview.png"
-          alt="Hi-Fi Prototype Recommendations"
-          style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
+        <motion.img
+          variants={imageVariants}
+          src="/tijuana.png"
+          alt="Tijuana River Valley Dashboard"
+          style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
         />
-<h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>3. Visual Design</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>The visual design emphasized clarity and accessibility. Color schemes were chosen to represent different data types (e.g., red for high pollution levels) while ensuring compliance with WCAG guidelines for color contrast. Icons and infographics were incorporated to aid quick comprehension.</li>
-    </ul>
-     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>4. Collaboration with Development Team</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>I worked closely with developers to ensure the design specifications were accurately implemented. Regular design reviews and feedback loops were established to maintain consistency and address any technical constraints promptly.</li>
-    </ul>
-  </div>
 
-<h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Features Implemented</h2>
-<hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '0rem 0' }} />
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          Sewage pollution from the Tijuana River has long affected South San Diego communities. In collaboration with UC
+          San Diego’s Resilient Shield team and the County of San Diego, we created an interactive dashboard that empowers
+          residents to make informed health and recreation decisions through real-time water quality and environmental data.
+        </motion.p>
 
-<div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-  {/* Left Column */}
-  <div style={{ flex: '1 1 45%' }}>
-    <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Interactive Map</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Displays real-time data on beach closures, hydrogen sulfide levels, odor complaints, and sewage spills.</li>
-    </ul>
-<h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Information Sections</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li> 'What We Know,' 'What We're Doing,' and 'What You Can Do' sections provide context and actionable advice to users.</li>
-    </ul>
-    
-  </div>
+        {/* Role */}
+        <motion.h2 variants={sectionVariants} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>
+          My Role
+        </motion.h2>
+        <motion.ul variants={listVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
+          <motion.li variants={sectionVariants}>Lead UI/UX Designer for the dashboard</motion.li>
+          <motion.li variants={sectionVariants}>Created Figma wireframes & high-fidelity prototypes</motion.li>
+          <motion.li variants={sectionVariants}>Collaborated with developers to deliver an accessible, responsive product</motion.li>
+        </motion.ul>
 
-  {/* Right Column */}
-  <div style={{ flex: '1 1 45%' }}>
-    <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Data Filters</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Users can filter data by category and time frame to focus on specific concerns.</li>
-    </ul>
-    
-     <h3 style={{ fontSize: '1.5rem', marginTop: '1.5rem' }}>Responsive Design</h3>
-    <ul style={{ paddingLeft: '1.5rem', marginBottom: '1rem' }}>
-      <li>Ensures usability across various devices, including smartphones, tablets, and computers.</li>
-    </ul>
-  </div>
-</div>
-
-<img
-  src="/sdgifs.gif"
-  alt="Tijuana River Valley Dashboard Walkthrough"
-  style={{
-    width: '100%',
-    height: 'auto',
-    borderRadius: '8px',
-    marginBottom: '1rem',
-  }}
-/>
-
-
-<h2 style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Impact</h2>
+        {/* Process */}
+        <motion.h2 variants={sectionVariants} style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '2rem' }}>
+          Design Process
+        </motion.h2>
         <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
-         <p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}> Since its launch, the dashboard has become a vital resource for South County residents, offering transparency and fostering community engagement in environmental health matters. The intuitive design has been praised for making complex data accessible to non-expert users, thereby enhancing public awareness and participation in addressing the sewage crisis.</p>
-        <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}></div><p style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-  You can view the live Tijuana River Valley Environmental Dashboard here:{' '}
-  <a
-    href="https://southregion.resilienthub.org/"
-    target="_blank"
-    rel="noopener noreferrer"
-    style={{ color: 'var(--accent-color)', textDecoration: 'underline' }}
-  >
-    https://southregion.resilienthub.org/
-  </a>
-</p>
 
-  
-        <footer style={{ marginTop: '4rem', fontSize: '0.875rem', color: '#888' }}>
+        <motion.h3 variants={sectionVariants} style={{ fontSize: '1.5rem', marginTop: '1rem' }}>1. Research & Insights</motion.h3>
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          Through resident interviews and surveys, we identified key needs: mobile-friendly access, multilingual support,
+          and simple, trustworthy data visualizations. These findings shaped the dashboard’s structure and priorities.
+        </motion.p>
+
+        <motion.h3 variants={sectionVariants} style={{ fontSize: '1.5rem', marginTop: '1rem' }}>2. Wireframing & Prototyping</motion.h3>
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          Early wireframes mapped information hierarchy and flows. Interactive prototypes in Figma allowed stakeholders to
+          test functionality, providing feedback that informed iteration.
+        </motion.p>
+        <motion.img
+          variants={imageVariants}
+          src="/sdoverview.png"
+          alt="Dashboard Wireframe/Prototype"
+          style={{ width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
+        />
+
+        <motion.h3 variants={sectionVariants} style={{ fontSize: '1.5rem', marginTop: '1rem' }}>3. Visual Design</motion.h3>
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          We used clear iconography and color-coding to make environmental data easy to scan (e.g., red = high pollution).
+          All elements met WCAG accessibility standards for contrast and readability.
+        </motion.p>
+
+        <motion.h3 variants={sectionVariants} style={{ fontSize: '1.5rem', marginTop: '1rem' }}>4. Development Collaboration</motion.h3>
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          Worked hand-in-hand with developers to ensure designs were feasible and consistent, with regular reviews to
+          resolve technical constraints quickly.
+        </motion.p>
+
+        {/* Features */}
+        <motion.h2 variants={sectionVariants} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '2rem' }}>
+          Key Features
+        </motion.h2>
+        <motion.ul variants={listVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
+          <motion.li variants={sectionVariants}><strong>Interactive Map:</strong> Real-time updates on closures, odor complaints, H₂S levels, and sewage spills</motion.li>
+          <motion.li variants={sectionVariants}><strong>Information Sections:</strong> “What We Know,” “What We’re Doing,” and “What You Can Do” for context and action</motion.li>
+          <motion.li variants={sectionVariants}><strong>Filters:</strong> Users can view data by category or time frame</motion.li>
+          <motion.li variants={sectionVariants}><strong>Responsive Design:</strong> Optimized for phones, tablets, and desktops</motion.li>
+        </motion.ul>
+
+        <motion.img
+          variants={imageVariants}
+          src="/sdgifs.gif"
+          alt="Tijuana River Valley Dashboard Walkthrough"
+          style={{ width: '100%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }}
+        />
+
+        {/* Impact */}
+        <motion.h2 variants={sectionVariants} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Impact</motion.h2>
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          Since launch, the dashboard has become a trusted community resource, praised for making complex environmental
+          data accessible to non-experts. It increased public awareness, supported policymaking, and gave residents
+          confidence in their daily decisions about recreation and health.
+        </motion.p>
+
+        <motion.p variants={sectionVariants} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
+          View the live dashboard:{' '}
+          <motion.a
+            href="https://southregion.resilienthub.org/"
+            target="_blank"
+            rel="noopener noreferrer"
+            whileHover={{ scale: 1.05, color: '#000' }}
+            style={{ color: 'var(--accent-color)', textDecoration: 'underline' }}
+          >
+            https://southregion.resilienthub.org/
+          </motion.a>
+        </motion.p>
+
+        <motion.footer variants={sectionVariants} style={{ marginTop: '4rem', fontSize: '0.875rem', color: '#888' }}>
           <p>&copy; {new Date().getFullYear()} Henry Keo. All rights reserved.</p>
-        </footer>
-      </section>
-      
-    );
-  }
-  
+        </motion.footer>
+      </motion.section>
+    </>
+  );
+}
