@@ -1,176 +1,202 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
 import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+
+/* -------------------- Motion Variants -------------------- */
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0 },
+};
+
+const stagger = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+/* -------------------- Styles -------------------- */
+
+const headingStyle = {
+  fontSize: '2.5rem',
+  color: 'var(--accent-color)',
+  marginBottom: '1rem',
+};
+
+const subheadingStyle = {
+  fontSize: '1.1rem',
+  maxWidth: 640,
+  lineHeight: 1.6,
+  marginBottom: '3rem',
+};
+
+const cardStyle = {
+  background: 'var(--bg-color)',
+  border: '1px solid rgba(0,0,0,0.08)',
+  borderRadius: '18px',
+  overflow: 'hidden',
+  boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+  display: 'flex',
+  flexDirection: 'column' as const,
+};
+
+/* -------------------- Page -------------------- */
 
 export default function ProjectsPage() {
-  const cardStyle = {
-    background: 'var(--bg-color)',
-    border: '1px solid #ccc',
-    borderRadius: '12px',
-    padding: '1rem',
-    marginBottom: '1rem',
-    boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
-  };
-
-  const buttonStyle = {
-    backgroundColor: 'var(--accent-color)',
-    color: '#fff',
-    padding: '0.75rem 1.25rem',
-    border: 'none',
-    borderRadius: '8px',
-    cursor: 'pointer',
-    fontWeight: 'bold',
-    fontSize: '1rem',
-  };
-
-  const hoverEffect = {
-    scale: 1.03,
-    boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
-  };
-
-  const hoverTransition = {
-    type: 'spring',
-    stiffness: 300,
-  };
-
-  // Animation variants
-  const containerVariants = {
-    hidden: {},
-    show: {
-      transition: {
-        staggerChildren: 0.4, // delays each project for a clean waterfall
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    show: { opacity: 1, y: 0, transition: { duration: 1.2, ease: 'easeOut' } },
-  };
-
   return (
     <>
       <Head>
         <title>Projects | Henry Keo</title>
-        <meta name="description" content="Projects designed by Henry Keo" />
+        <meta
+          name="description"
+          content="UX case studies by Henry Keo, focusing on research-driven, human-centered design."
+        />
       </Head>
 
       <main
         style={{
-          fontFamily: 'Arial, sans-serif',
-          maxWidth: '800px',
-          margin: '0 auto',
+          fontFamily: 'var(--font-family)',
           padding: '2rem',
+          maxWidth: '1100px',
+          margin: '0 auto',
           position: 'relative',
-          overflow: 'hidden',
         }}
       >
-        {/* Soft Animated Accent Background */}
+        {/* Ambient Accent */}
         <motion.div
           animate={{ y: [0, -40, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
+          transition={{ duration: 12, repeat: Infinity }}
           style={{
             position: 'absolute',
-            top: '80px',
-            right: '40px',
-            width: '250px',
-            height: '250px',
-            background: 'radial-gradient(circle, var(--accent-color), transparent)',
-            borderRadius: '50%',
-            opacity: 0.4,
-            zIndex: -1,
+            top: 80,
+            right: 40,
+            width: 280,
+            height: 280,
+            background:
+              'radial-gradient(circle, var(--accent-color), transparent 70%)',
             filter: 'blur(40px)',
+            opacity: 0.45,
+            zIndex: -1,
           }}
         />
 
-        <motion.h1
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
-          style={{
-            fontSize: '2.5rem',
-            color: 'var(--accent-color)',
-            marginBottom: '1rem',
-          }}
-        >
-          My Projects
-        </motion.h1>
-        <hr
-          style={{
-            border: 'none',
-            height: '1px',
-            backgroundColor: 'var(--accent-color)',
-            margin: '1rem 0',
-          }}
-        />
-
-        {/* Projects with staggered animations */}
-        <motion.div
-          variants={containerVariants}
+        {/* -------------------- HEADER -------------------- */}
+        <motion.section
           initial="hidden"
           animate="show"
+          variants={stagger}
+          style={{ marginBottom: '4rem' }}
+        >
+          <motion.h1 variants={fadeUp} style={headingStyle}>
+            Case Studies
+          </motion.h1>
+
+          <motion.p variants={fadeUp} style={subheadingStyle}>
+            A selection of projects where I applied cognitive science,
+            user research, and interaction design to solve real-world problems.
+          </motion.p>
+        </motion.section>
+
+        {/* -------------------- PROJECT GRID -------------------- */}
+        <motion.ul
+          variants={stagger}
+          initial="hidden"
+          animate="show"
+          style={{
+            listStyle: 'none',
+            padding: 0,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(2, 1fr)',
+            gap: '2rem',
+          }}
         >
           {[
             {
+              title: 'Lifesaver — Digital Health Platform',
+              description:
+                'Improving access to universal healthcare through research-driven UX.',
               href: '/projects/lifesaver',
-              title: 'Lifesaver Project - UCSD Design Lab Center for Health',
-              description: 'Providing Universal Healthcare.',
-              img: '/devonmars.jpg',
-              alt: 'Devon Mars',
+              image: '/devonmars.jpg',
             },
             {
+              title: 'Tijuana River Valley Dashboard',
+              description:
+                'Helping residents understand environmental crises through accessible data visualization.',
               href: '/projects/tijuana',
-              title: 'County of San Diego – Tijuana River Valley Environmental Dashboard',
-              description: 'An interactive dashboard for the County of San Diego to help users stay informed about environmental crises.',
-              img: '/tijuana.png',
-              alt: 'Tijuana Dashboard',
+              image: '/tijuana.png',
             },
             {
+              title: 'Lowprice Center Marketplace',
+              description:
+                'A peer-to-peer marketplace designed for UCSD students.',
               href: '/projects/lowprice',
-              title: 'Lowprice Center - UCSD CSES',
-              description: 'An e-commerce platform for UCSD students to exchange and sell goods.',
-              img: '/Home Page.png',
-              alt: 'Lowprice Homepage',
+              image: '/Home Page.png',
             },
             {
+              title: 'Lumiere Skincare Kiosk',
+              description:
+                'An interactive kiosk guiding users to personalized skincare solutions.',
               href: '/projects/kiosk',
-              title: 'DSGN 100 Prototyping – Lumiere Skincare Kiosk',
-              description: 'An interactive kiosk to help users find the right skincare products.',
-              img: '/skincare.webp',
-              alt: 'Lumiere Kiosk',
+              image: '/skincare.webp',
             },
           ].map((project) => (
-            <motion.div
+            <motion.li
               key={project.href}
-              variants={itemVariants}
+              variants={fadeUp}
+              whileHover={{
+                y: -6,
+                boxShadow: '0 16px 32px rgba(0,0,0,0.08)',
+              }}
               style={cardStyle}
             >
-              <Link href={project.href} passHref>
-                <motion.button
-                  whileHover={hoverEffect}
-                  transition={hoverTransition}
-                  style={buttonStyle}
-                >
-                  {project.title}
-                </motion.button>
-              </Link>
-              <div style={{ marginTop: '1rem' }}>
-                <p style={{ marginBottom: '0.5rem' }}>{project.description}</p>
-                <img
-                  src={project.img}
-                  alt={project.alt}
-                  style={{
-                    maxWidth: '100%',
-                    height: 'auto',
-                    borderRadius: '8px',
-                  }}
-                />
+              {/* Image */}
+              <img
+                src={project.image}
+                alt={project.title}
+                style={{
+                  width: '100%',
+                  height: 200,
+                  objectFit: 'cover',
+                }}
+              />
+
+              {/* Content */}
+              <div style={{ padding: '1.5rem' }}>
+                <h3 style={{ marginBottom: '0.5rem' }}>{project.title}</h3>
+                <p style={{ marginBottom: '1.25rem', lineHeight: 1.5 }}>
+                  {project.description}
+                </p>
+
+                <Link href={project.href}>
+                  <span
+                    style={{
+                      color: 'var(--accent-color)',
+                      fontWeight: 600,
+                    }}
+                  >
+                    View case study →
+                  </span>
+                </Link>
               </div>
-            </motion.div>
+            </motion.li>
           ))}
-        </motion.div>
+        </motion.ul>
+
+        {/* -------------------- FOOTER -------------------- */}
+        <footer
+          style={{
+            marginTop: '6rem',
+            paddingTop: '2rem',
+            borderTop: '1px solid rgba(0,0,0,0.08)',
+            fontSize: '0.85rem',
+            color: '#666',
+          }}
+        >
+          © {new Date().getFullYear()} Henry Keo · UX Designer
+        </footer>
       </main>
     </>
   );

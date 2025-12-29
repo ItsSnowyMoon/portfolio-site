@@ -1,105 +1,192 @@
-// app/contact/page.tsx
 'use client';
 
+import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 
+/* -------------------- Motion Variants -------------------- */
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0 },
+};
+
+const stagger = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+/* -------------------- Styles -------------------- */
+
+const cardStyle = {
+  background: 'var(--bg-color)',
+  border: '1px solid rgba(0,0,0,0.08)',
+  borderRadius: '16px',
+  padding: '1.5rem',
+  boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+};
+
+const linkStyle = {
+  color: 'var(--accent-color)',
+  fontWeight: 600,
+};
+
+/* -------------------- Page -------------------- */
+
 export default function ContactPage() {
   return (
-    <section
-      style={{
-        fontFamily: 'Arial, sans-serif',
-        maxWidth: '800px',
-        margin: '0 auto',
-        padding: '2rem',
-        position: 'relative',
-        overflow: 'hidden',
-      }}
-    >
-      {/* Animated Content */}
-      <motion.h1
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}
-      >
-        Contact
-      </motion.h1>
+    <>
+      <Head>
+        <title>Contact | Henry Keo</title>
+        <meta name="description" content="Get in touch with UX Designer Henry Keo." />
+      </Head>
 
-      <hr
+      <main
         style={{
-          border: 'none',
-          height: '1px',
-          backgroundColor: 'var(--accent-color)',
-          margin: '1rem 0',
+          fontFamily: 'var(--font-family)',
+          maxWidth: 900,
+          margin: '0 auto',
+          padding: '2rem',
+          position: 'relative',
         }}
-      />
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.6 }}
-        style={{ fontSize: '1.125rem', marginBottom: '2rem' }}
       >
-        Feel free to reach out via email, phone, or LinkedIn!
-      </motion.p>
-
-      <motion.ul
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.4, duration: 0.6 }}
-        style={{ listStyle: 'none', padding: 0, fontSize: '1.1rem' }}
-      >
-        <li style={{ marginBottom: '1rem' }}>
-          Email:{' '}
-          <Link
-            href="mailto:henry@example.com"
-            style={{ color: 'var(--link-color)', textDecoration: 'underline' }}
-          >
-            henrykeo12@gmail.com
-          </Link>
-        </li>
-        <li style={{ marginBottom: '1rem' }}>
-          Phone:{' '}
-          <Link
-            href="tel:+1234567890"
-            style={{ color: 'var(--link-color)', textDecoration: 'underline' }}
-          >
-            +1 (952) 270-4948
-          </Link>
-        </li>
-        <li style={{ marginBottom: '1rem' }}>
-          LinkedIn:{' '}
-          <Link
-            href="https://www.linkedin.com/in/henry-keo-6673351b0"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: 'var(--link-color)', textDecoration: 'underline' }}
-          >
-            linkedin.com/in/henrykeo
-          </Link>
-        </li>
-      </motion.ul>
-
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.6, duration: 0.6 }}
-        style={{ marginTop: '3rem', textAlign: 'left' }}
-      >
-        <h3 style={{ fontSize: '1.5rem', color: 'var(--accent-color)' }}>
-          Let's Make Things Happen!
-        </h3>
-        <p
+        {/* Ambient Accent */}
+        <motion.div
+          animate={{ y: [0, -40, 0] }}
+          transition={{ duration: 12, repeat: Infinity }}
           style={{
-            fontSize: '1.125rem',
-            lineHeight: '1.6',
-            color: 'var(--text-color)',
+            position: 'absolute',
+            top: 80,
+            right: 60,
+            width: 260,
+            height: 260,
+            background:
+              'radial-gradient(circle, var(--accent-color), transparent 70%)',
+            filter: 'blur(50px)',
+            opacity: 0.35,
+            zIndex: -1,
+          }}
+        />
+
+        {/* Header */}
+        <motion.section
+          variants={stagger}
+          initial="hidden"
+          animate="show"
+          style={{ marginBottom: '4rem' }}
+        >
+          <motion.h1
+            variants={fadeUp}
+            style={{
+              fontSize: '2.5rem',
+              color: 'var(--accent-color)',
+              marginBottom: '1rem',
+            }}
+          >
+            Contact
+          </motion.h1>
+
+          <motion.p
+            variants={fadeUp}
+            style={{
+              fontSize: '1.2rem',
+              lineHeight: 1.6,
+              maxWidth: 520,
+            }}
+          >
+            Want to collaborate, chat about design, or talk opportunities? I’d love to hear from you.
+            
+          </motion.p>
+        </motion.section>
+
+        {/* Contact Cards */}
+        <motion.section
+          variants={stagger}
+          initial="hidden"
+          animate="show"
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+            gap: '1.5rem',
+            marginBottom: '4rem',
           }}
         >
-          I look forward to collaborating on exciting projects and hearing from you!
-        </p>
-      </motion.div>
-    </section>
+          {/* Email */}
+          <motion.div variants={fadeUp} whileHover={{ y: -6 }} style={cardStyle}>
+            <h3 style={{ marginBottom: '.5rem' }}>Email</h3>
+            <Link href="mailto:henrykeo12@gmail.com" style={linkStyle}>
+              henrykeo12@gmail.com
+            </Link>
+          </motion.div>
+
+          {/* Phone */}
+          <motion.div variants={fadeUp} whileHover={{ y: -6 }} style={cardStyle}>
+            <h3 style={{ marginBottom: '.5rem' }}>Phone</h3>
+            <Link href="tel:+19522704948" style={linkStyle}>
+              +1 (952) 270-4948
+            </Link>
+          </motion.div>
+
+          {/* LinkedIn */}
+          <motion.div variants={fadeUp} whileHover={{ y: -6 }} style={cardStyle}>
+            <h3 style={{ marginBottom: '.5rem' }}>LinkedIn</h3>
+            <Link
+              href="https://www.linkedin.com/in/henry-keo-6673351b0"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={linkStyle}
+            >
+              linkedin.com/in/henrykeo →
+            </Link>
+          </motion.div>
+        </motion.section>
+
+        {/* Closing CTA */}
+        <motion.section
+          variants={stagger}
+          initial="hidden"
+          animate="show"
+          style={{ maxWidth: 600 }}
+        >
+          <motion.h2
+            variants={fadeUp}
+            style={{
+              fontSize: '1.75rem',
+              color: 'var(--accent-color)',
+              marginBottom: '0.75rem',
+            }}
+          >
+            Let’s Make Things Happen
+          </motion.h2>
+
+          <motion.p
+            variants={fadeUp}
+            style={{
+              fontSize: '1.125rem',
+              lineHeight: 1.6,
+              color: 'var(--text-color)',
+            }}
+          >
+            I’m always excited to work on meaningful problems and thoughtful
+            digital experiences. Don’t hesitate to reach out 👋
+          </motion.p>
+        </motion.section>
+
+        {/* Footer */}
+        <footer
+          style={{
+            marginTop: '6rem',
+            paddingTop: '2rem',
+            borderTop: '1px solid rgba(0,0,0,0.08)',
+            fontSize: '0.85rem',
+            color: '#666',
+          }}
+        >
+          © {new Date().getFullYear()} Henry Keo · UX Designer
+        </footer>
+      </main>
+    </>
   );
 }

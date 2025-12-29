@@ -3,151 +3,241 @@
 import { motion } from 'framer-motion';
 
 export default function LifeSaverProjectPage() {
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 20 },
+  const fade = {
+    hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
   };
 
-  const fadeInUpStagger = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
-  };
-
-  const imageVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+  const image = {
+    hidden: { opacity: 0, scale: 0.96 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } },
   };
 
   return (
-    <motion.section
+    <motion.main
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
       style={{
-        fontFamily: 'Arial, sans-serif',
-        maxWidth: '800px',
+        maxWidth: '920px',
         margin: '0 auto',
-        padding: '2rem',
+        padding: '3rem 1.5rem',
+        fontFamily: 'system-ui, -apple-system, sans-serif',
+        lineHeight: 1.6,
       }}
     >
-      <motion.h1 variants={fadeInUp} style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
-        LifeSaver: Decentralizing Healthcare Everywhere
-      </motion.h1>
-      <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
+      {/* HERO */}
+      <motion.header variants={fade} style={{ marginBottom: '3rem' }}>
+        <h1 style={{ fontSize: '3rem', marginBottom: '1rem' }}>
+          LifeSaver
+        </h1>
+        <p style={{ fontSize: '1.25rem', maxWidth: '720px' }}>
+          Designing a decentralized healthcare system that enables non-experts
+          to deliver safe, guided medical care in remote and extreme environments.
+        </p>
 
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        Healthcare today is centralized, costly, and often out of reach. From rural communities to space missions,
-        patients need tools to access treatment anywhere.
-      </motion.p>
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem', fontStyle: 'italic' }}>
-        How might we empower non-experts to deliver safe, effective care in remote or extreme environments?
-      </motion.p>
+        <div style={{ marginTop: '1.5rem', fontSize: '0.95rem', color: '#666' }}>
+          <strong>Role:</strong> Lead UI/UX Designer ·
+          <strong> Platform:</strong> Mobile, AR ·
+          <strong> Context:</strong> UCSD DSGN 160 / World Design Capital 2024
+        </div>
+      </motion.header>
 
-      {/* Solution */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>
-        Solution
-      </motion.h2>
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        LifeSaver is a portable ecosystem combining hardware and software to deliver decentralized healthcare:
-      </motion.p>
-      <motion.ul variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
-        <li>A <strong>medical pod</strong> with essential treatment equipment.</li>
-        <li>
-          <strong>AILA (AI Living Assistant):</strong> A mobile/AR companion that diagnoses, guides procedures, and
-          monitors vitals in real time.
-        </li>
-      </motion.ul>
-      <motion.img variants={imageVariants} src="/HomeLOP.png" alt="AILA Samsung Flip 5 Interface"
-        style={{ maxWidth: '150%', height: 'auto', borderRadius: '8px', marginBottom: '1rem' }} />
+      {/* HERO IMAGE */}
+      <motion.img
+        variants={image}
+        src="/HomeLOP.png"
+        alt="AILA interface overview"
+        style={{
+          width: '100%',
+          borderRadius: '14px',
+          marginBottom: '4rem',
+        }}
+      />
 
-      {/* Role */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>My Role</motion.h2>
-      <motion.ul variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
-        <li>Lead UI/UX Designer for AILA</li>
-        <li>Created user flows, Figma wireframes, and high-fidelity prototypes</li>
-        <li>Designed AR workflows for safe, hands-free treatment guidance</li>
-      </motion.ul>
+      {/* PROBLEM */}
+      <motion.section variants={fade} style={{ marginBottom: '4rem' }}>
+        <h2>Problem</h2>
+        <p>
+          Healthcare systems today are highly centralized, expensive, and often
+          inaccessible in rural regions, disaster zones, and off-world missions.
+          In these environments, trained medical professionals may not be present
+          when care is urgently needed.
+        </p>
+        <p style={{ fontStyle: 'italic', marginTop: '1rem' }}>
+          How might we empower non-experts to confidently deliver safe,
+          effective medical care under stress?
+        </p>
+      </motion.section>
 
-      {/* Process */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '2rem' }}>Process</motion.h2>
-      <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
+      {/* SOLUTION */}
+      <motion.section variants={fade} style={{ marginBottom: '4rem' }}>
+        <h2>Solution</h2>
+        <p>
+          LifeSaver is a portable healthcare ecosystem combining physical
+          equipment with an intelligent software assistant.
+        </p>
 
-      <motion.h3 variants={fadeInUp} style={{ fontSize: '1.75rem', marginTop: '1rem' }}>Research & Insights</motion.h3>
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        Started in UCSD’s DSGN 160 course, we developed personas in urban, rural, and disaster settings, mapping
-        workflows like emergencies, check-ups, and medication delivery. This clarified key needs: <strong>clarity under
-        stress</strong>, <strong>portability</strong>, and <strong>offline resilience</strong>.
-      </motion.p>
-      <motion.img variants={imageVariants} src="/chimeg.png" alt="User Personas" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
-      <motion.img variants={imageVariants} src="/asthma.png" alt="Workflow Research" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
+        <ul>
+          <li>
+            <strong>Medical Pod:</strong> A compact kit containing essential
+            treatment tools and sensors.
+          </li>
+          <li>
+            <strong>AILA (AI Living Assistant):</strong> A mobile and AR interface
+            that diagnoses conditions, guides procedures step-by-step, and
+            monitors vitals in real time.
+          </li>
+        </ul>
+      </motion.section>
 
-      <motion.h3 variants={fadeInUp} style={{ fontSize: '1.75rem', marginTop: '1rem' }}>Designing for Samsung Flip 5</motion.h3>
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        We leveraged the Flip 5’s foldable layout for flexible use:
-      </motion.p>
-      <motion.ul variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
-        <li><strong>Closed:</strong> Compact square for quick actions & vitals on the go</li>
-        <li><strong>Open:</strong> Dual windows for procedures, navigation, and patient info</li>
-      </motion.ul>
-      <motion.img variants={imageVariants} src="/Front Display.png" alt="Closed Mode" style={{ maxWidth: '150%', borderRadius: '8px', marginBottom: '1rem' }} />
-      <motion.img variants={imageVariants} src="/Main Display.png" alt="Open Mode" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
+      {/* DESIGN PROCESS */}
+      <motion.section variants={fade} style={{ marginBottom: '5rem' }}>
+        <h2>Design Process</h2>
 
-      <motion.h3 variants={fadeInUp} style={{ fontSize: '1.75rem', marginTop: '1rem' }}>Wireframes → High-Fidelity Prototypes</motion.h3>
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        Early wireframes tested our dual-screen flows; hi-fi prototypes refined layouts for real use in stressful conditions.
-      </motion.p>
-      <motion.img variants={imageVariants} src="/wireframe.png" alt="Wireframes" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
+        <h3>Research & Insights</h3>
+        <p>
+          We began with generative research across urban, rural, and disaster-relief
+          scenarios. Personas and workflows were mapped for emergencies,
+          medication delivery, and routine checkups.
+        </p>
+        <p>
+          Three recurring needs emerged:
+          <strong> clarity under stress</strong>,
+          <strong> extreme portability</strong>, and
+          <strong> resilience without internet access</strong>.
+        </p>
 
-      {/* Key flows */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '2rem' }}>Key Flows</motion.h2>
-      <motion.ul variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
-        <li><strong>Procedures:</strong> Step-by-step checklists w/ timers & visuals for non-experts</li>
-        <li><strong>Quick Access:</strong> Swipe-up sidebar for vitals, camera, map, timers</li>
-        <li><strong>Vitals:</strong> Real-time + trend view, color-coded risk alerts</li>
-        <li><strong>Camera:</strong> Auto-senses vitals + emotion detection for mental health</li>
-        <li><strong>Profiles:</strong> Personal records incl. history, prescriptions, labs</li>
-      </motion.ul>
+        <motion.div
+          style={{ display: 'grid', gap: '1rem', marginTop: '1.5rem' }}
+        >
+          <motion.img variants={image} src="/chimeg.png" alt="Persona research" />
+          <motion.img variants={image} src="/asthma.png" alt="Workflow mapping" />
+        </motion.div>
+      </motion.section>
 
-      <motion.img variants={imageVariants} src="/medical.png" alt="Procedures" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
-      <motion.img variants={imageVariants} src="/quick.png" alt="Quick Access" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
-      <motion.img variants={imageVariants} src="/vitals.png" alt="Vitals" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
+      {/* PLATFORM DECISIONS */}
+      <motion.section variants={fade} style={{ marginBottom: '5rem' }}>
+        <h3>Designing for Samsung Flip 5</h3>
+        <p>
+          The foldable form factor allowed us to design for both rapid access and
+          sustained medical workflows.
+        </p>
 
-      {/* Testing */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2.5rem', color: 'var(--accent-color)', marginTop: '2rem' }}>Testing & Iteration</motion.h2>
-      <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '.5rem 0' }} />
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        Field-tested on Devon Island (Mars analog site) with Wizard-of-Oz simulations. Insights drove clearer instructions,
-        AR guidance, and stress-resilient layouts. 
-      </motion.p>
-      <motion.img variants={imageVariants} src="/cliff.png" alt="Devon Island Test" style={{ maxWidth: '100%', borderRadius: '8px', marginBottom: '1rem' }} />
+        <ul>
+          <li>
+            <strong>Closed:</strong> A compact square display for vitals,
+            alerts, and one-tap emergency actions.
+          </li>
+          <li>
+            <strong>Open:</strong> Dual-pane layouts supporting procedures,
+            navigation, and patient data simultaneously.
+          </li>
+        </ul>
 
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        At <strong>World Design Capital 2024</strong>, we showcased LifeSaver’s pod + AILA to global designers. I
-        represented the design team, demoed workflows, and gathered live feedback from healthcare professionals.
-      </motion.p>
+        <motion.div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '1rem',
+            marginTop: '1.5rem',
+          }}
+        >
+          <motion.img variants={image} src="/Front Display.png" alt="Closed mode" />
+          <motion.img variants={image} src="/Main Display.png" alt="Open mode" />
+        </motion.div>
+      </motion.section>
 
-      <motion.div variants={fadeInUp} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
-        <motion.img variants={imageVariants} src="/panel.JPG" alt="Panel" style={{ width: '100%', borderRadius: '8px' }} />
-        <motion.img variants={imageVariants} src="/booth.JPG" alt="Booth" style={{ width: '100%', borderRadius: '8px' }} />
-      </motion.div>
+      {/* WIREFRAMES */}
+      <motion.section variants={fade} style={{ marginBottom: '5rem' }}>
+        <h3>From Wireframes to High-Fidelity</h3>
+        <p>
+          Early wireframes focused on validating dual-screen flows and reducing
+          cognitive load. As we moved to high-fidelity prototypes, layouts were
+          refined to remain legible, calm, and actionable in high-stress
+          situations.
+        </p>
 
-      {/* Impact */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Impact & Reflection</motion.h2>
-      <motion.ul variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem', paddingLeft: '1.5rem' }}>
-        <li>Enabled non-experts to perform guided care in remote settings</li>
-        <li>Showcased at WDC 2024, sparking dialogue on accessible healthcare</li>
-        <li>Sharpened my skills designing AR workflows & stress-resilient UIs</li>
-      </motion.ul>
+        <motion.img
+          variants={image}
+          src="/wireframe.png"
+          alt="Wireframes"
+          style={{ marginTop: '1.5rem' }}
+        />
+      </motion.section>
 
-      {/* Next Steps */}
-      <motion.h2 variants={fadeInUp} style={{ fontSize: '2rem', color: 'var(--accent-color)', marginTop: '1rem' }}>Next Steps</motion.h2>
-      <motion.p variants={fadeInUp} style={{ fontSize: '1.125rem', marginBottom: '1rem' }}>
-        Ongoing work: expanding treatment libraries, voice integration for accessibility, and further AR usability testing.
-      </motion.p>
+      {/* KEY FLOWS */}
+      <motion.section variants={fade} style={{ marginBottom: '5rem' }}>
+        <h2>Key User Flows</h2>
 
-      <motion.footer variants={fadeInUp} style={{ marginTop: '4rem', fontSize: '0.875rem', color: '#888' }}>
-        <p>&copy; {new Date().getFullYear()} Henry Keo. All rights reserved.</p>
-      </motion.footer>
-    </motion.section>
+        <ul>
+          <li>
+            <strong>Guided Procedures:</strong> Step-by-step checklists with
+            timers, visuals, and confirmations.
+          </li>
+          <li>
+            <strong>Quick Access Panel:</strong> Swipe-up tools for vitals,
+            camera, maps, and timers.
+          </li>
+          <li>
+            <strong>Vitals Monitoring:</strong> Real-time data with trend views
+            and color-coded risk alerts.
+          </li>
+          <li>
+            <strong>Camera & Sensors:</strong> Automated vitals capture and
+            emotion detection for mental health screening.
+          </li>
+        </ul>
+
+        <motion.div
+          style={{ display: 'grid', gap: '1rem', marginTop: '1.5rem' }}
+        >
+          <motion.img variants={image} src="/medical.png" alt="Procedures flow" />
+          <motion.img variants={image} src="/quick.png" alt="Quick access UI" />
+          <motion.img variants={image} src="/vitals.png" alt="Vitals dashboard" />
+        </motion.div>
+      </motion.section>
+
+      {/* TESTING */}
+      <motion.section variants={fade} style={{ marginBottom: '5rem' }}>
+        <h2>Testing & Iteration</h2>
+        <p>
+          LifeSaver was field-tested on Devon Island, a Mars analog site, using
+          Wizard-of-Oz simulations. These tests revealed the need for clearer
+          instructional hierarchy, stronger visual feedback, and AR-based
+          guidance for hands-free operation.
+        </p>
+
+        <motion.img
+          variants={image}
+          src="/cliff.png"
+          alt="Field testing on Devon Island"
+          style={{ marginTop: '1.5rem' }}
+        />
+      </motion.section>
+
+      {/* IMPACT */}
+      <motion.section variants={fade} style={{ marginBottom: '4rem' }}>
+        <h2>Impact & Reflection</h2>
+        <ul>
+          <li>
+            Enabled non-experts to confidently perform guided medical care
+            in remote environments.
+          </li>
+          <li>
+            Showcased at <strong>World Design Capital 2024</strong>, engaging
+            healthcare professionals and global designers.
+          </li>
+          <li>
+            Deepened my experience designing AR workflows and stress-resilient
+            interfaces.
+          </li>
+        </ul>
+      </motion.section>
+
+      <footer style={{ fontSize: '0.85rem', color: '#777' }}>
+        © {new Date().getFullYear()} Henry Keo
+      </footer>
+    </motion.main>
   );
 }

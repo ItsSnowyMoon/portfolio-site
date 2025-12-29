@@ -15,23 +15,58 @@ export default function DesignToggle() {
     localStorage.setItem('mode', mode);
   }, [mode]);
 
+  const isDay = mode === 'day';
+
   return (
     <button
-      onClick={() => setMode(mode === 'day' ? 'night' : 'day')}
+      onClick={() => setMode(isDay ? 'night' : 'day')}
+      aria-label="Toggle design mode"
       style={{
-        padding: '0.5rem 1rem',
-        borderRadius: '1rem',
-        border: 'none',
-        backgroundColor: mode === 'day' ? '#333' : '#eee',
-        color: mode === 'day' ? '#fff' : '#000',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '0.4rem',
+        padding: '0.4rem 0.75rem',
+        borderRadius: '999px',
+        border: '1px solid rgba(0,0,0,0.08)',
+        backgroundColor: 'var(--surface-color)',
+        color: 'var(--text-color)',
         cursor: 'pointer',
-        marginLeft: 'auto', // Align it to the right side of the header
-        fontSize: '1rem',
-        fontWeight: 'bold',
-        transition: 'background-color 0.3s ease, color 0.3s ease',
+        boxShadow: 'var(--shadow-sm)',
+        transition:
+          'transform var(--transition-fast), box-shadow var(--transition-fast)',
       }}
     >
-      Switch to {mode === 'day' ? 'Night' : 'Day'} Mode
+      {/* Icon */}
+      <span
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '28px',
+          height: '28px',
+          borderRadius: '50%',
+          backgroundColor: isDay
+            ? 'var(--accent-soft)'
+            : 'rgba(255,255,255,0.08)',
+          color: 'var(--accent-color)',
+          fontSize: '0.9rem',
+        }}
+      >
+        {isDay ? '☀︎' : '☾'}
+      </span>
+
+      {/* Fixed-width label */}
+      <span
+        style={{
+          width: '42px',            // 👈 locks button width
+          textAlign: 'center',
+          fontSize: '0.85rem',
+          fontWeight: 600,
+          color: 'var(--muted-text)',
+        }}
+      >
+        {isDay ? 'Day' : 'Night'}
+      </span>
     </button>
   );
 }

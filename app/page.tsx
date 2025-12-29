@@ -3,282 +3,289 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+
+/* -------------------- Motion Variants -------------------- */
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0 },
+};
+
+const stagger = {
+  hidden: {},
+  show: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+/* -------------------- Reusable Styles -------------------- */
+
+const sectionStyle = {
+  marginBottom: '4rem',
+};
+
+const headingStyle = {
+  fontSize: '1.75rem',
+  color: 'var(--accent-color)',
+  marginBottom: '1.5rem',
+};
+
 const cardStyle = {
   background: 'var(--bg-color)',
-  border: '1px solid #ccc',
-  borderRadius: '12px',
-  padding: '1rem',
-  marginBottom: '1rem',
-  boxShadow: '0 2px 4px rgba(0,0,0,0.05)',
+  border: '1px solid rgba(0,0,0,0.08)',
+  borderRadius: '18px',
+  overflow: 'hidden',
+  boxShadow: '0 8px 24px rgba(0,0,0,0.04)',
+  display: 'flex',
+  flexDirection: 'column' as const,
 };
 
 const buttonStyle = {
   backgroundColor: 'var(--accent-color)',
   color: '#fff',
-  padding: '0.75rem 1.25rem',
+  padding: '0.6rem 1.1rem',
   border: 'none',
-  borderRadius: '8px',
+  borderRadius: '10px',
   cursor: 'pointer',
-  fontWeight: 'bold',
-  fontSize: '1rem',
+  fontWeight: 600,
+  fontSize: '0.95rem',
 };
 
-const hoverEffect = {
-  scale: 1.03,
-  boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
-};
-
-const hoverTransition = {
-  type: 'spring',
-  stiffness: 300,
-};
-
-
-const fadeInUp = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-};
-
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+/* -------------------- Page -------------------- */
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Henry Keo | Portfolio</title>
-        <meta name="description" content="Portfolio of Henry Keo" />
+        <title>Henry Keo | UX Designer</title>
+        <meta
+          name="description"
+          content="UX Designer with a Cognitive Science background specializing in research-driven, human-centered design."
+        />
       </Head>
 
-      <main style={{
-        fontFamily: 'var(--font-family)',
-        padding: '2rem',
-        maxWidth: '1000px',
-        margin: '0 auto',
-        position: 'relative',
-        overflow: 'hidden',
-      }}>
-        {/* Animated Background Accent */}
+      <main
+        style={{
+          fontFamily: 'var(--font-family)',
+          padding: '2rem',
+          maxWidth: '1100px',
+          margin: '0 auto',
+          position: 'relative',
+        }}
+      >
+        {/* Ambient Accent */}
         <motion.div
           animate={{ y: [0, -40, 0] }}
-          transition={{ duration: 10, repeat: Infinity }}
+          transition={{ duration: 12, repeat: Infinity }}
           style={{
             position: 'absolute',
-            top: '60px',
-            right: '60px',
-            width: '300px',
-            height: '300px',
-            background: 'radial-gradient(circle, var(--accent-color), transparent)',
-            borderRadius: '50%',
-            opacity: .5,
+            top: 80,
+            right: 40,
+            width: 280,
+            height: 280,
+            background:
+              'radial-gradient(circle, var(--accent-color), transparent 70%)',
+            filter: 'blur(40px)',
+            opacity: 0.45,
             zIndex: -1,
-            filter: 'blur(30px)',
           }}
         />
 
-        {/* Hero Section */}
+        {/* -------------------- HERO -------------------- */}
         <motion.section
-          variants={fadeInUp}
-          initial="initial"
-          animate="animate"
-          transition={{ duration: 0.8 }}
+          variants={stagger}
+          initial="hidden"
+          animate="show"
           style={{
-            display: 'flex',
-            flexDirection: 'row',
+            display: 'grid',
+            gridTemplateColumns: '1.2fr 1fr',
+            gap: '3rem',
             alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '2rem',
-            flexWrap: 'wrap',
-            marginBottom: '3rem',
+            marginBottom: '5rem',
           }}
         >
-          {/* Text Column */}
-          <div style={{ flex: 1, minWidth: '280px' }}>
+          {/* Text */}
+          <div>
             <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: .8 }}
+              variants={fadeUp}
               style={{
-                fontSize: '2.5rem',
-                color: 'var(--accent-color)',
+                fontSize: '2.75rem',
+                lineHeight: 1.1,
                 marginBottom: '1rem',
               }}
             >
-              Hi, I'm Henry Keo
+              Hi, I’m{' '}
+              <span style={{ color: 'var(--accent-color)' }}>Henry Keo</span>
             </motion.h1>
-            <hr style={{ border: 'none', height: '1px', backgroundColor: 'var(--accent-color)', margin: '1rem 0' }} />
+
             <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.3, duration: 0.6 }}
-              style={{ fontSize: '1.25rem', lineHeight: '1.6' }}
+              variants={fadeUp}
+              style={{
+                fontSize: '1.25rem',
+                lineHeight: 1.6,
+                maxWidth: 520,
+              }}
             >
-              A UI/UX designer driven to dig deep and delve into unique problems through user-centered solutions.
+              I’m a <strong>UX Designer</strong> with a{' '}
+              <strong>Cognitive Science</strong> background, focused on designing
+              intuitive, research-driven products that make complex systems feel
+              human.
             </motion.p>
 
-            {/* Explore Buttons */}
-            <motion.section
-              variants={containerVariants}
-              initial="hidden"
-              animate="show"
-              style={{ marginTop: '2rem' }}
+            <motion.div
+              variants={fadeUp}
+              style={{
+                display: 'flex',
+                gap: '1rem',
+                marginTop: '2rem',
+                flexWrap: 'wrap',
+              }}
             >
-              <h2 style={{ fontSize: '1.75rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>Explore</h2>
-              <ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                {[
-                  { href: '/about', label: 'About Me' },
-                  { href: '/projects', label: 'My Projects' },
-                  { href: '/contact', label: 'Contact' },
-                ].map((link, i) => (
-                  <motion.li
-                    key={link.href}
-                    variants={fadeInUp}
-                  >
-                    <Link href={link.href} passHref>
-                      <motion.button
-                        whileHover={{
-                          scale: 1.05,
-                          boxShadow: '0 6px 12px rgba(0,0,0,0.15)',
-                        }}
-                        transition={{ type: 'spring', stiffness: 300 }}
-                        style={{
-                          backgroundColor: 'var(--accent-color)',
-                          color: '#fff',
-                          padding: '0.5rem 1rem',
-                          border: 'none',
-                          borderRadius: '8px',
-                          cursor: 'pointer',
-                          fontWeight: 'bold',
-                          fontSize: '1rem',
-                        }}
-                      >
-                        {link.label}
-                      </motion.button>
-                    </Link>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.section>
+              <Link href="/projects">
+                <motion.button whileHover={{ scale: 1.05 }} style={buttonStyle}>
+                  View Case Studies
+                </motion.button>
+              </Link>
+
+              <Link href="/about">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  style={{
+                    ...buttonStyle,
+                    backgroundColor: 'transparent',
+                    color: 'var(--accent-color)',
+                    border: '1px solid var(--accent-color)',
+                  }}
+                >
+                  About Me
+                </motion.button>
+              </Link>
+            </motion.div>
           </div>
 
-          {/* Hero Image Column */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            style={{
-              flex: '0 0 400px',
-              maxWidth: '400px',
-              textAlign: 'right',
-              position: 'relative',
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'flex-end',
-            }}
-          >
+          {/* Portrait */}
+          <motion.div variants={fadeUp} style={{ display: 'flex', justifyContent: 'center' }}>
             <div
               style={{
-                position: 'absolute',
-                bottom: '0',
-                width: '300px',
-                height: '245px',
-                backgroundColor: 'var(--accent-color)',
-                borderRadius: '12px',
-                zIndex: 0,
-              }}
-            ></div>
-            <motion.img
-              src="/henrykeowedding.png"
-              alt="Henry Keo illustration"
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: 'spring', stiffness: 200 }}
-              style={{
-                width: '100%',
-                maxWidth: '250px',
-                height: 'auto',
-                objectFit: 'cover',
-                borderRadius: '1rem',
                 position: 'relative',
-                zIndex: 1,
+                width: 320,
+                height: 360,
+                backgroundColor: 'var(--accent-color)',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
               }}
-            />
+            >
+              <motion.img
+                src="/henrykeowedding.png"
+                alt="Henry Keo portrait"
+                whileHover={{ scale: 1.05 }}
+                style={{
+                  width: 280,
+                  borderRadius: '18px',
+                }}
+              />
+            </div>
           </motion.div>
         </motion.section>
 
-        {/* Featured Projects */}
-        <motion.section
-  variants={fadeInUp}
-  initial="initial"
-  animate="animate"
-  transition={{ duration: 0.8, delay: 0.4 }}
-  style={{ marginTop: '3rem' }}
->
-  <h2 style={{ fontSize: '1.75rem', color: 'var(--accent-color)', marginBottom: '1rem' }}>
-    Featured Projects
-  </h2>
-  <ul style={{ listStyle: 'none', padding: 0 }}>
-  {/* Lifesaver Project */}
-    <li style={cardStyle}>
-      <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
-        <Link href="/projects/lifesaver" passHref>
-          <button style={buttonStyle}>Lifesaver Project – UCSD Design Lab Center for Health</button>
-        </Link>
-      </motion.div>
-      <p style={{ marginTop: '0.5rem' }}>
-        A digital healthcare initiative to improve access to universal care.
-      </p>
-    </li>
- 
+        {/* -------------------- FEATURED CASE STUDIES -------------------- */}
+        <section style={sectionStyle}>
+          <h2 style={headingStyle}>Featured Case Studies</h2>
 
-    {/* Tijuana River Valley Dashboard */}
-    <li style={cardStyle}>
-      <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
-        <Link href="/projects/tijuana" passHref>
-          <button style={buttonStyle}>County of San Diego – Tijuana River Valley Environmental Dashboard</button>
-        </Link>
-      </motion.div>
-      <p style={{ marginTop: '0.5rem' }}>
-        An interactive dashboard for the County of San Diego to help users stay informed about environmental crises.
-      </p>
-    </li>
+          <motion.ul
+            variants={stagger}
+            initial="hidden"
+            animate="show"
+            style={{
+              listStyle: 'none',
+              padding: 0,
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)', // 2x2 grid
+              gap: '2rem',
+            }}
+          >
+            {[
+              {
+                title: 'Lifesaver — Digital Health Platform',
+                description:
+                  'Improving access to universal healthcare through research-driven UX.',
+                href: '/projects/lifesaver',
+                image: '/HomeLOP.png',
+              },
+              {
+                title: 'Tijuana River Valley Dashboard',
+                description:
+                  'Helping residents understand environmental crises through data visualization.',
+                href: '/projects/tijuana',
+                image: 'tijuana.png',
+              },
+              {
+                title: 'Lowprice Center Marketplace',
+                description:
+                  'A peer-to-peer marketplace designed for UCSD students.',
+                href: '/projects/lowprice',
+                image: '/after-listings.png',
+              },
+              {
+                title: 'Lumiere Skincare Kiosk',
+                description:
+                  'An interactive retail kiosk guiding users to the right products.',
+                href: '/projects/kiosk',
+                image: '/skincare.jpg',
+              },
+            ].map((project) => (
+              <motion.li
+                key={project.title}
+                variants={fadeUp}
+                whileHover={{ y: -6 }}
+                style={cardStyle}
+              >
+                {/* Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  style={{
+                    width: '100%',
+                    height: 180,
+                    objectFit: 'cover',
+                  }}
+                />
 
-    {/* Lowprice Center */}
-    <li style={cardStyle}>
-      <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
-        <Link href="/projects/lowprice" passHref>
-          <button style={buttonStyle}>Lowprice Center – UCSD CSES</button>
-        </Link>
-      </motion.div>
-      <p style={{ marginTop: '0.5rem' }}>
-        An online marketplace for UCSD students to buy and sell goods.
-      </p>
-    </li>
+                {/* Content */}
+                <div style={{ padding: '1.25rem' }}>
+                  <h3 style={{ marginBottom: '0.5rem' }}>{project.title}</h3>
+                  <p style={{ marginBottom: '1rem', lineHeight: 1.5 }}>
+                    {project.description}
+                  </p>
+                  <Link href={project.href}>
+                    <span
+                      style={{
+                        color: 'var(--accent-color)',
+                        fontWeight: 600,
+                      }}
+                    >
+                      View case study →
+                    </span>
+                  </Link>
+                </div>
+              </motion.li>
+            ))}
+          </motion.ul>
+        </section>
 
-     {/* Lumiere Skincare Kiosk */}
-    <li style={cardStyle}>
-      <motion.div whileHover={hoverEffect} transition={hoverTransition} style={{ display: 'inline-block' }}>
-        <Link href="/projects/kiosk" passHref>
-          <button style={buttonStyle}>DSGN 100 Prototyping – Lumiere Skincare Kiosk</button>
-        </Link>
-      </motion.div>
-      <p style={{ marginTop: '0.5rem' }}>
-        An interactive kiosk to help users find the right skincare products.
-      </p>
-    </li>
-
-  </ul>
-</motion.section>
-
-
-        {/* Footer */}
-        <footer style={{ marginTop: '4rem', fontSize: '0.875rem', color: '#888' }}>
-          &copy; {new Date().getFullYear()} Henry Keo. All rights reserved.
+        {/* -------------------- FOOTER -------------------- */}
+        <footer
+          style={{
+            marginTop: '6rem',
+            paddingTop: '2rem',
+            borderTop: '1px solid rgba(0,0,0,0.08)',
+            fontSize: '0.85rem',
+            color: '#666',
+          }}
+        >
+          © {new Date().getFullYear()} Henry Keo · UX Designer
         </footer>
       </main>
     </>
