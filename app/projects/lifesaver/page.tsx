@@ -34,7 +34,7 @@ export default function LifeSaverProjectPage() {
         padding: '3rem 1.5rem 5rem',
         fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, sans-serif',
         lineHeight: 1.7,
-        color: '#111827',
+        color: '#b6b8f2',
       }}
     >
       <motion.header variants={fade} style={{ marginBottom: '3rem' }}>
@@ -52,7 +52,7 @@ export default function LifeSaverProjectPage() {
           style={{
             fontSize: '1.25rem',
             maxWidth: '760px',
-            color: '#4b5563',
+
           }}
         >
           Designing a decentralized healthcare system that enables non-experts
@@ -72,20 +72,14 @@ export default function LifeSaverProjectPage() {
         </div>
 
         <div
-          style={{
-            marginTop: '2rem',
-            padding: '1.25rem',
-            background: '#f8fafc',
-            border: '1px solid #e5e7eb',
-            borderRadius: '16px',
-          }}
+          
         >
-          <h3 style={{ marginTop: 0 }}>My Contributions</h3>
+          <h3 style={{ marginTop: '1rem' }}>My Contributions</h3>
           <ul>
-            <li>Designed mobile and AR interfaces</li>
-            <li>Built wireframes and high-fidelity prototypes</li>
-            <li>Supported usability testing</li>
-            <li>Iterated designs based on field-test feedback</li>
+            <p>Designed mobile and AR interfaces</p>
+            <p>Built wireframes and high-fidelity prototypes</p>
+            <p>Supported usability testing</p>
+            <p>Iterated designs based on field-test feedback</p>
           </ul>
         </div>
       </motion.header>
@@ -319,28 +313,28 @@ export default function LifeSaverProjectPage() {
         <h2>Impact & Reflection</h2>
 
         <ul>
-          <li>
+          <p>
             Participants successfully followed guided workflows and completed
             simulated procedures with minimal facilitator intervention.
-          </li>
-          <li>
+          </p>
+          <p>
             Users reported greater confidence when navigating unfamiliar medical
             procedures with AI-assisted guidance.
-          </li>
-          <li>
+          </p>
+          <p>
             The project was showcased at World Design Capital 2024 and presented
             to healthcare professionals, designers, and researchers.
-          </li>
-          <li>
+          </p>
+          <p>
             I strengthened my skills in AR design, high-stress workflow design,
             usability testing, and cross-functional collaboration.
-          </li>
+          </p>
         </ul>
       </motion.section>
 
       <div style={{ display: 'grid', gap: '1rem', marginBottom: '4rem' }}>
-        <motion.img variants={imageAnim} src="/crowd.jpg" alt="Audience" style={imageStyle} />
-        <motion.img variants={imageAnim} src="/team.png" alt="Project team" style={imageStyle} />
+        <motion.img variants={imageAnim} src="/crowd.JPG" alt="Audience" style={imageStyle} />
+        <motion.img variants={imageAnim} src="/team.PNG" alt="Project team" style={imageStyle} />
       </div>
 
       <footer
